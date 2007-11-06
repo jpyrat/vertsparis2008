@@ -1,0 +1,6 @@
+#CACHE{0}
+#HTTP_HEADER{Content-Type: text/plain; charset=#CHARSET}
+<BOUCLE_groupes(GROUPES_MOTS){par titre}>
+	create_groupe("[(#TITRE*|texte_script|jp_NewLine2str)]", "[(#DESCRIPTIF*|texte_script|jp_NewLine2str)]", "[(#TEXTE*|texte_script|jp_NewLine2str)]", '[(#UNSEUL|=={oui}|?{'oui','non'})]', '[(#OBLIGATOIRE|=={oui}|?{'oui','non'})]', '[(#ARTICLES|=={oui}|?{'oui','non'})]', '[(#BREVES|=={oui}|?{'oui','non'})]', '[(#RUBRIQUES|=={oui}|?{'oui','non'})]', '[(#SYNDIC|=={oui}|?{'oui','non'})]', '[(#EVENEMENTS|=={oui}|?{'oui','non'})]', '[(#MINIREZO|=={oui}|?{'oui','non'})]', '[(#COMITE|=={oui}|?{'oui','non'})]', '[(#FORUM|=={oui}|?{'oui','non'})]');
+<BOUCLE_mots(MOTS){id_groupe}{par titre}>		create_mot("[(#_groupes:TITRE*|texte_script|jp_NewLine2str)]", "[(#TITRE*|texte_script|jp_NewLine2str)]", "[(#DESCRIPTIF*|texte_script|jp_NewLine2str)]", "[(#TEXTE*|texte_script|jp_NewLine2str)]");
+</BOUCLE_mots></BOUCLE_groupes>
