@@ -212,7 +212,6 @@ function exec_postconfig() {
 	include_spip("inc/lang");
 	include_spip("inc/charsets");
 
-	install_debut_html("Configurateur site");
 	config_site();
 
 	
