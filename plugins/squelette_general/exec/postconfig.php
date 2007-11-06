@@ -203,7 +203,7 @@ function config_site() {
 
 ## <--------------------------------------------
 
-	
+}	
 
 function exec_postconfig() {
 	if (!defined("_ECRIRE_INC_VERSION")) return;
@@ -215,7 +215,6 @@ function exec_postconfig() {
 	install_debut_html("Configurateur site");
 	config_site();
 
-	echo "<h1>Installation termin&eacute;</h1><p><a href='./?exec=cfg&cfg=orion'>Suite de la configuration</a></p>";
-	install_fin_html();
+	
 }
 ?>
