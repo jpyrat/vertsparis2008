@@ -1,0 +1,24 @@
+<BOUCLE_rubrique_principal(RUBRIQUES){id_rubrique}>
+
+<BOUCLE_LiensMois(EVENEMENTS){statut=publie}{branche}{date_debut>=(#ENV{date_ev,#ENV{date}}|affdate{'Y-m-d'})}{"&nbsp;| "}>[
+<a href="#m(#DATE_DEBUT|affdate{'Ym'}|unique)">[(#DATE_DEBUT|nom_mois|ucfirst)]&nbsp;[(#DATE_DEBUT|annee)]</a>
+]</BOUCLE_LiensMois>
+
+<BOUCLE_article(EVENEMENTS){statut=publie}{branche}{date_debut>=(#ENV{date_ev,#ENV{date}}|affdate{'Y-m-d'})}>
+<BOUCLE_premierdumois(EVENEMENTS){statut=publie}{id_evenement}{doublons}>
+<h2>[<a name="m(#DATE_DEBUT|affdate{'Ym'})"></a>][(#DATE_DEBUT|nom_mois|ucfirst)] [(#DATE_DEBUT|annee)]</h2>
+<ul>
+ <INCLURE{fond=inc-agendaliste_evenement_court}{id_evenement}>
+</BOUCLE_premierdumois>
+<BOUCLE_rappel_rubrique_principal(RUBRIQUES){id_rubrique=#_rubrique_principal:ID_RUBRIQUE}>
+<BOUCLE_MOIS(EVENEMENTS){statut=publie}{branche}{date_debut==^(#_article:DATE_DEBUT|affdate{'Y-m'})}{doublons}{par date_debut}>
+ <INCLURE{fond=inc-agendaliste_evenement_court}{id_evenement}>
+</BOUCLE_MOIS>
+</BOUCLE_rappel_rubrique_principal>
+</ul>
+</B_premierdumois>
+</BOUCLE_article>
+
+
+[<div class="notes">(#NOTES)</div>]
+</BOUCLE_rubrique_principal>

@@ -1,0 +1,96 @@
+[(#REM) article]
+#CACHE{86400}
+<BOUCLE_article_principal(ARTICLES) {id_article}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr" dir="ltr">
+<head>
+<title>[(#TITRE|supprimer_numero|attribut_html)] [#NOM_SITE_SPIP]</title>
+<INCLURE{fond=inc-head}>
+</head>
+<body>
+    <div id="container">
+        <!-- haut de page : la banniere (lien constant vers l'accueil) -->
+        <INCLURE{fond=inc-entete}>
+        <div id="wrapper">
+            
+            <div id="content">
+                <!-- le fil d'ariane -->
+                <div id="fil_ariane">
+		<a href="#URL_SITE_SPIP/"><:accueil_site:></a><BOUCLE_ariane(HIERARCHIE){id_article}>&nbsp;&raquo;&nbsp;<a href="#URL_RUBRIQUE">[(#TITRE|supprimer_numero|couper{80})]</a></BOUCLE_ariane>[&nbsp;&raquo;&nbsp;(#TITRE|supprimer_numero|couper{80})]
+		</div>
+                <!-- titre du contenu de la page -->
+                <BOUCLE_parent(HIERARCHIE){inverse}>
+[<h2>(#TITRE|supprimer_numero)</h2>]
+</BOUCLE_parent>
+                <!-- (un chapo)  -->
+	<div class="article">
+                [<h3 class="chapo majuscule">(#TITRE|supprimer_numero)</h3>]
+
+
+
+                <!-- ARTICLE PRINCIPALE DE L'ACCUEIL, en tete de gondole -->               
+
+                <div class="article_default">
+	<div id="texte">#TEXTE</div>[<div class="notes">(#NOTES)</div>]
+
+                <!-- ARTICLE précédent / suivant -->                
+
+
+
+<?
+    $titre_principal = "[(#ID_ARTICLE)]";
+    $premier_article = true;
+?>
+
+
+
+<BOUCLE_art_prec(ARTICLES){titre_mot=Campagne}{par id_article}{inverse}>
+<?
+    $titre_n = "[(#ID_ARTICLE)]";
+
+    if ($titre_n < $titre_principal AND $premier_article) {
+       $premier_article = false;
+       ?>
+       <br /><a href="#URL_ARTICLE" class="article_precedent"><h4><< #TITRE</h4></a>
+       <?
+    }
+?>
+</BOUCLE_art_prec>
+
+<?
+    $titre_principal = "[(#ID_ARTICLE)]";
+    $premier_article = true;
+?>
+<BOUCLE_art_suivant(ARTICLES){titre_mot=Campagne}{par id_article}>
+<?
+    $titre_n = "[(#ID_ARTICLE)]";
+
+    if ($titre_n > $titre_principal AND $premier_article) {
+       $premier_article = false;
+       ?>
+       <br /><a href="#URL_ARTICLE" class="article_suivant"><h4>#TITRE >></h4></a>
+       <?
+    }
+    ?>
+</BOUCLE_art_suivant>
+
+
+
+
+	
+	</div>
+	</div>
+		[(#REM) Forum de l'article ]
+			<a href="#forum" name="forum" id="forum"></a>
+			[<h4 class="forum-repondre"><a href="(#PARAMETRES_FORUM|url_reponse_forum)"><:repondre_article:></a></h4>]
+			<INCLURE{fond=inc-forum}{id_article}>
+            </div>
+        </div>
+        <INCLURE{fond=inc-gauche}>
+        <INCLURE{fond=inc-droite}>
+        <INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
+	
+    </div>
+</body>
+</html>
+</BOUCLE_article_principal>

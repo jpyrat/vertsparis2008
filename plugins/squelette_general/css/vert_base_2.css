@@ -1,0 +1,287 @@
+
+/* -------------------------------------------------------
+ 	1. ELEMENTS STRUCTURELLES DU SQUELETTE
+ ------------------------------------------------------- */
+body {
+font-family:arial,sans-serif;
+font-size:12px;
+/*font-size-adjust:none;
+font-stretch:normal;*/
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+text-align:center;
+}
+html, body {
+margin:0pt;
+padding:0pt; }
+div#container {
+    width:980px; margin:0 auto;
+    }
+
+p{font-size:100%;}
+
+/* textarea {width : 100%;} */
+
+#header a {height:280px;width:980px;margin:0;padding:0;border:0;}
+#header a {text-align:center;}
+#header a img {height:280px;width:980px;margin:0;padding:0;border:0;}
+#header h1
+{
+	display: none; /* on cache le nom du site  */
+	position:absolute;
+	top:-1000px
+}
+
+
+div#container{
+    text-align:left;
+    background-image: url("../images/cadre_fond.gif");
+    background-repeat:repeat-y;
+    background-position:top;}
+
+div#wrapper{
+    float:left;width:100%;
+}
+
+div#content p{line-height:1.4}
+div#content {margin: 0 200px;width:580px;}
+
+#navigation {padding-left:10px;width:200px;float:left;margin-left:-980px}
+#navigation a {display:inline;border:0;width:180px;margin:auto;float:left;}
+
+div#extra, div#navigation{text-align:center;margin-top:10px;}
+
+div#extra{float:left;width:200px;margin-left:-200px}
+#extra a {display:block;}
+div#footer{
+    width:100%;
+    clear:left;
+    background-color:#FFF;
+    background-image:url("../images/cadre_footer.gif");
+    background-repeat:no-repeat;
+    background-position:top;
+}
+div#footer p{position:relative;bottom:-15px;margin: 0;padding:5px 10px; text-align:right;vertical-align:top;height:40px;}
+/*#footer {text-align:right;margin-bottom:-40px}
+#footer {float:right;margin-top:25px;background:transparent;}*/
+
+/* -------------------------------------------------------
+ 	2. ELEMENTS HTML DE BASE
+ ------------------------------------------------------- */
+p{margin:0 10px 10px}
+/*a {display:block;padding:0px 10px;}*/
+
+h1
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 160%;
+	font-weight: bold;
+}
+
+h2
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	font-size: 300%;
+	font-weight: bold;
+}
+
+h3 /* attention SPIP utilise cette balise */
+{
+	margin-top: .2em;
+	margin-bottom: .2em;
+	font-size: 130%;
+	font-weight: bold;
+}
+
+h4
+{
+	margin: 2px;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+h5
+{
+	margin: 2px;
+	margin-left: 0px;
+	font-size: 90%;
+	font-weight: bold;
+}
+
+h6
+{
+	margin: 2px;
+	margin-left: 0px;
+	font-size: 80%;
+	font-weight: bold;
+}
+
+ul {margin-left:10px;padding:0;}
+
+li 
+{ 
+    list-style : none;
+    margin:0;
+    padding:0;
+    text-align:left;
+}
+
+img {border:0;}
+
+input {
+    font-family:arial,sans-serif;
+    font-size:100%;
+    height:15px;
+    margin-left:3px;
+    vertical-align:text-bottom;
+}
+
+/* -------------------------------------------------------
+ 	3. ELEMENTS STRUCTURELLES PARTICULIERS AU SITE
+ ------------------------------------------------------- */
+ 
+   /* a. header, l'image de la banni�re */
+
+#header a.nom-site
+{
+    display:block;
+    border:0;
+    margin:0;
+    padding:0;
+    height: 280px;
+    width: 980px;
+}
+
+#header a.nom-site img {border:0;}
+
+#fil_ariane a {display:inline;font-size:80%;}
+#fil_ariane {margin-left:10px;}
+
+ /*navigation */
+ 
+.navigation {}
+
+   /* b. menu extras de droite 
+        (pour le menu principal, � gauche, voir "annexe.css") */
+        
+div#outils_utilisateurs, div.syndic {
+    width:180px; margin: 10px;padding-bottom:5px;text-align:left;vertical-align:text-bottom;
+}
+div#outils_utilisateurs {
+    background-color:#89BA13;
+}
+h2.menu-breves {
+    margin: 15px auto;
+	padding: 10px;
+	font-size: 130%;
+	font-weight: bold;
+	height:30px
+}
+.menu-breves {
+    text-align:left; 
+    vertical-align:middle;
+    text-transform:lowercase;
+}
+.menu-breves:first-letter{
+    text-transform: uppercase;
+}
+
+#agenda, #newsletter ,#adherer, #rechercher{
+    height:20px;
+    text-align:left;
+    vertical-align:text-bottom;
+}
+#agenda, #newsletter ,#adherer {
+	padding-left:20px;
+}
+#rechercher input {text-align:left;vertical-align:middle;float:left;display:inline;height:17px}
+#rechercher label {display:none;}
+    /* liens Extras (colonne de droite) */
+    
+a#agenda, a#newsletter ,a#adherer {
+    padding-top:5px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url("../images/fleche_v_fond_vert.gif");}
+    
+.syndic li a.en_savoir_plus {
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url("../images/plus_n.gif");
+	
+}
+
+.syndic li {margin-bottom:10px;clear:both;}
+
+    /* liens Footer */
+    
+#footer a {display:inline;}
+
+/* -------------------------------------------------------
+   4. couleurs et typos
+ ------------------------------------------------------- */
+ 
+ /* class pour conformer � la volee */
+ .majuscule {text-transform :uppercase;}
+ .minuscule {text-transform :lowercase;} 
+ 
+ h2
+{
+    color: #5E8626; /* vert moyen */
+	font-family:  Arial,"Helvetica Neue", Helvetica,  Verdana, Tahoma, sans-serif;
+	font-weight: bolder;
+	line-height: 1em;
+	text-transform:uppercase;
+}
+
+ h4
+{
+    color: #5E8626; /* vert moyen */
+	font-family:  Arial,"Helvetica Neue", Helvetica,  Verdana, Tahoma, sans-serif;
+	font-weight: bolder;
+	line-height: 1em;
+	text-transform:uppercase;
+}
+
+ h5
+{
+    color: #5E8626; /* vert moyen */
+	font-family:  Arial,"Helvetica Neue", Helvetica,  Verdana, Tahoma, sans-serif;
+}
+
+/* liens - cas g�n�rals */
+a:link, a:visited, a {text-decoration:none;color:#5E8626}
+a:hover {color:#ADCF00;cursor:pointer;}
+
+/* les extras : 
+        a. les menus des "breves" (syndic ? forum ? arrondissements ? ...) */
+
+.syndic {background-color:#F2F2F2;}
+.menu-breves { background-color: #000; color:#FFF }
+.syndic ul {color:#5E8626;font-weight:bold;}
+.syndic li a {color: #000; font-size:95%;font-weight:normal;}
+.syndic li a.en_savoir_plus { text-transform:uppercase;font-size:85%;}
+.syndic li a:hover {color:#AAA;}
+
+        /* b. les outils utilisateurs */
+
+#agenda, #newsletter ,#adherer {color:#5E8626;font-weight:bold;}
+a#agenda:hover, a#newsletter:hover, a#adherer:hover {color: #FFF;}
+
+/* le footer */
+#footer a, #footer a:link, #footer a:visited {color:#AAA; text-transform:uppercase;font-size:85%;font-weight:100;}
+#footer a:hover {color:#000;}
+
+
+/* -------------------------------------------------------
+   5. liserets et cadres
+ ------------------------------------------------------- */
+
+#rechercher {background : #89BA13;}
+#agenda, #newsletter ,#adherer {background : #ADCF00; border:3px solid #89BA13;}
+input {border : 1px solid #89BA13;}

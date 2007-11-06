@@ -1,0 +1,10 @@
+[(#REM) pied]
+
+<div id="footer">
+<p><a class="pied" href="#URL_PAGE{backend}" title="<:syndiquer_site:>"><img src="#CHEMIN{feed.png}" alt="<:icone_suivi_activite:>" width="16" height="16" class="format_png" />&nbsp;RSS&nbsp;2.0</a> | 
+<BOUCLE_pied(ARTICLES){titre_mot=Footer}>
+	<a class="pied" href="#URL_ARTICLE">[(#TITRE|supprimer_numero)]</a> | 
+</BOUCLE_pied>
+<a href="#URL_PAGE{plan}"><:plan_site:></a>[ | 
+<a class="pied"><img src="(#LOGO_SITE_SPIP_SURVOL||extraire_attribut{src})" width="[(#LOGO_SITE_SPIP_SURVOL||extraire_attribut{width})]" height="[(#LOGO_SITE_SPIP_SURVOL||extraire_attribut{height})]" alt="" /></a>]</p>
+</div>

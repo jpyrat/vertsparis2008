@@ -1,0 +1,25 @@
+[(#REM) menu droit]
+<div id="extra">
+            <!-- Positionnement pour le module "voir la video" -->
+		<BOUCLE_Video(ARTICLES){titre_mot=video}{par hasard}{0,1}>
+		<BOUCLE_documents_joints(DOCUMENTS) {id_article}{par hasard}{0,1} >
+		[(#LOGO_DOCUMENT|#URL_ARTICLE)<br />]
+		</BOUCLE_documents_joints>
+		</BOUCLE_Video>
+
+            <!-- le menu des outils utilisateurs -->
+            <div id="outils_utilisateurs">
+		<BOUCLE_agenda(RUBRIQUES){titre_mot=Agenda}>
+                <a id="agenda" href="#URL_RUBRIQUE" title="Votre agenda">AGENDA</a>
+		</BOUCLE_agenda>
+		<BOUCLE_newsletter(ARTICLES){titre_mot=Newsletter}>
+                <a id="newsletter" href="#URL_ARTICLE" title="Votre lettre de nouvelles">NEWSLETTER</a>
+		</BOUCLE_newsletter>
+		<BOUCLE_Engager(ARTICLES){titre_mot=Engager}>
+                <a id="adherer" href="#URL_ARTICLE">S'ENGAGER PLUS</a>
+		</BOUCLE_Engager>
+                #FORMULAIRE_RECHERCHE
+            </div>
+            <!-- le menu des outils utilisateurs -->
+        </div>
+<!-- fin  de extra -->

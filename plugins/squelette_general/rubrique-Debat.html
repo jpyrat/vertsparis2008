@@ -1,0 +1,60 @@
+[(#REM) rubrique]
+#CACHE{7200}
+<BOUCLE_rubrique_principal(RUBRIQUES) {id_rubrique}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr" dir="ltr">
+<head>
+<title>[(#TITRE|supprimer_numero|attribut_html)] [#NOM_SITE_SPIP]</title>
+<INCLURE{fond=inc-head}>
+</head>
+<body>
+    <div id="container">
+        <!-- haut de page : la banniere (lien constant vers l'accueil) -->
+        <INCLURE{fond=inc-entete}>
+        <div id="wrapper">
+            <div id="content">
+	<div id="fil_ariane"><a href="#URL_SITE_SPIP/"><:accueil_site:></a><BOUCLE_ariane(HIERARCHIE){id_rubrique}>&nbsp;&raquo;&nbsp;<a href="#URL_RUBRIQUE">[(#TITRE|supprimer_numero|couper{80})]</a></BOUCLE_ariane>[&nbsp;&raquo;&nbsp;(#TITRE|supprimer_numero|couper{80})]</div>
+<BOUCLE_dossiers(RUBRIQUES){id_rubrique}{titre_mot=Debat}>
+	[<h2>(#TITRE|supprimer_numero)</h2>]
+	<BOUCLE_sousdossier(RUBRIQUES) {id_parent} {par num titre, titre}>
+	<div class="article">
+	[(#LOGO_RUBRIQUE||image_reduire{150,0})]
+	<h3><a class="titre-article">[(#TITRE|supprimer_numero)]</a></h3>
+	[(#TEXTE|couper{350})<br /><a class="en_savoir_plus" href="#URL_RUBRIQUE">en savoir plus</a>]
+	</div>
+	</BOUCLE_sousdossier>
+	
+</BOUCLE_dossiers>
+<BOUCLE_parent(HIERARCHIE){inverse}>
+[<h2>(#TITRE|supprimer_numero)</h2>]
+</BOUCLE_parent>
+<BOUCLE_article_dossiers(ARTICLES){id_rubrique}{titre==^0.}{doublons}>
+<div id ="article_debat" class="article">
+	<h3 class="chapo majuscule">[(#TITRE|supprimer_numero)]</h3>
+	[(#LOGO_RUBRIQUE||image_reduire{150,0})]
+	
+	[(#TEXTE)]
+	
+</BOUCLE_article_dossiers>
+	<div id="autres_lien">
+	<ul>
+	<BOUCLE_autre_article(ARTICLES){id_rubrique}{par num titre, titre}{doublons}>
+	<li><a class="interrogation" href="#URL_ARTICLE">[(#TITRE|supprimer_numero)]</a></li>
+	</BOUCLE_autre_article>
+	</ul></div></div>
+<BOUCLE_article_dossiers_forum(ARTICLES){id_rubrique}{titre==^0.}>
+[(#REM) Forum de l'article ]
+<a href="#forum" name="forum" id="forum"></a>
+[<h4 class="forum-repondre"><a href="(#PARAMETRES_FORUM|url_reponse_forum)"><:repondre_article:></a></h4>]
+			<INCLURE{fond=inc-forum}{id_article}>
+</BOUCLE_article_dossiers_forum>
+<//B_dossiers>
+            </div>
+        </div>
+        <INCLURE{fond=inc-gauche}>
+        <INCLURE{fond=inc-droite}>
+        <INCLURE{fond=inc-pied}>
+    </div>
+</body>
+</html>
+</BOUCLE_rubrique_principal>

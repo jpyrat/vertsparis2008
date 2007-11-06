@@ -1,0 +1,9 @@
+<div id="rechercher">
+<form action="[(#ENV{lien})]" method="get"><div>
+	[(#ENV{lien}|form_hidden)]
+	[<input type="hidden" name="lang" value="(#ENV{lang})" />]
+	<label for="recherche"><:info_rechercher:></label>
+	<input type="text" name="recherche" id="recherche" value="&nbsp;[(#ENV{recherche}|sinon{<:info_rechercher:>" onfocus="this.value='';})]" /><input name="Submit" type="image" value="ok" src="#CHEMIN{images/ok_v.gif}" style="width:17px;height:17px;" alt="bouton valider" />
+</div>
+</form>
+</div>

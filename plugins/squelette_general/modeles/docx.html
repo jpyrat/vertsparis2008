@@ -1,0 +1,56 @@
+<BOUCLE_doc (DOCUMENTS) {id_document}>
+[(#REM)
+
+	Modele pour <doc> en dl/dt/dd
+	cf. http://pompage.net/pompe/listesdefinitions/
+    si le document à un titre ou une legende sinon meme modele que
+	pour les images.
+	La largeur de la legende est egale a la largeur de l'image
+	avec un minimum de 120px, et un maximum de 350px.
+
+	Dans le cas d'une simple image (mode=image), on affiche
+	le document lui-meme, sans lien de telechargement
+]
+[(#MODE|=={image}|?{' '})
+	#SET{fichier,#URL_DOCUMENT}
+	#SET{width,#LARGEUR}
+	#SET{height,#HAUTEUR}
+	#SET{url,#ENV{lien}}
+]
+[(#MODE|=={image}|?{'',' '})
+	[(#SET{fichier,[(#LOGO_DOCUMENT||extraire_attribut{src})]})]
+	[(#SET{width,[(#LOGO_DOCUMENT||extraire_attribut{width})]})]
+	[(#SET{height,[(#LOGO_DOCUMENT||extraire_attribut{height})]})]
+	#SET{url,#ENV{lien,#URL_DOCUMENT}}
+]
+
+[(#TITRE|!={''}|?{' '})
+	#SET{meta,'true'}
+	#SET{metatitre,'true'}
+]
+
+[(#DESCRIPTIF|!={''}|?{' '})
+	#SET{meta,'true'}
+	#SET{metadesc,'true'}
+]
+
+[(#GET{meta}|=={'true'}|?{' '})
+	<dl class="spip_document_#ID_DOCUMENT spip_documents[ spip_documents_(#ENV{align})][ (#ENV{class})] spip_lien_ok"[ style="float:(#ENV{align}|match{left|right});"]>
+<dt>[<a href="(#GET{url})"[ class="(#ENV{lien_class})"][ (#ENV{lien}|?{'',type="#MIME_TYPE"})]>]<img src="#GET{fichier}" width="#GET{width}" height="#GET{height}" [lang="(#ENV{lang})"] alt="[(#ENV{alt}|texte_backend)[(#GET{url}|?{ - })]][(#GET{url}|?{[(#TYPE_DOCUMENT) - ][(#TAILLE|taille_en_octets|texte_backend)]})]" title="[(#ENV{alt}|texte_backend)[(#GET{url}|?{ - })]][(#GET{url}|?{[(#TYPE_DOCUMENT) - ][(#TAILLE|taille_en_octets|texte_backend)]})]" />[(#GET{url}|?{</a>})]</dt>
+[(#GET{metadesc}|=={'true'}|?{' '})
+[<dt class="#EDIT{titre} spip_doc_titre"[ style="width:(#GET{width}|min{350}|max{120})px;"]><strong>(#ENV*{titre_legende}|propre|sinon{#TITRE})</strong></dt>]
+]
+[(#GET{metadesc}|=={''}|?{' '})
+[<dd class="#EDIT{titre} spip_doc_titre"[ style="width:(#GET{width}|min{350}|max{120})px;"]><strong>(#ENV*{titre_legende}|propre|sinon{#TITRE})</strong></dd>]
+]
+[<dd class="#EDIT{descriptif} spip_doc_descriptif"[ style="width:(#GET{width}|min{350}|max{120})px;"]>(#ENV*{legende}|propre|sinon{#DESCRIPTIF|PtoBR})[(#NOTES|PtoBR)]</dd>]
+</dl>
+]
+
+[(#GET{meta}|=={''}|?{' '})
+	<span class="spip_document_#ID_DOCUMENT spip_documents[ spip_documents_(#ENV{align})][ (#ENV{class})] spip_lien_ok"[ style="float:(#ENV{align}|match{left|right}); width:(#GET{width}|min{350}|max{120})px;"]>
+	[<a href="(#GET{url})"[ class="(#ENV{lien_class})"][ (#ENV{lien}|?{'',type="#MIME_TYPE"})]>]<img src="#GET{fichier}" width="#GET{width}" height="#GET{height}" [lang="(#ENV{lang})"] alt="[(#ENV{alt}|texte_backend)[(#GET{url}|?{ - })]][(#GET{url}|?{[(#TYPE_DOCUMENT) - ][(#TAILLE|taille_en_octets|texte_backend)]})]" title="[(#ENV{alt}|texte_backend)[(#GET{url}|?{ - })]][(#GET{url}|?{[(#TYPE_DOCUMENT) - ][(#TAILLE|taille_en_octets|texte_backend)]})]" />[(#GET{url}|?{</a>})]</span>
+]
+
+
+</BOUCLE_doc>

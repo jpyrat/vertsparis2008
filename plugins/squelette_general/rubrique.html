@@ -1,0 +1,11 @@
+[(#REM) rubrique]
+#CACHE{7200}
+<BOUCLE_rubrique_principal(RUBRIQUES) {id_rubrique}>
+<BOUCLE_ChercherTypeSquelette(HIERARCHIE){tout}{id_rubrique}{type='_squelette'}>
+    <BOUCLE_LeSquelette(MOTS){id_rubrique}{type='_squelette'}{0,1}>
+    <INCLURE{fond=rubrique-(#TITRE|corriger_caracteres| translitteration|strtr{' ','_'})}{id_rubrique=#_rubrique_principal:ID_RUBRIQUE}> 
+    </BOUCLE_LeSquelette>
+</BOUCLE_ChercherTypeSquelette>
+<INCLURE{fond=rubrique-default}{id_rubrique=#_rubrique_principal:ID_RUBRIQUE}>
+<//B_ChercherTypeSquelette>
+</BOUCLE_rubrique_principal>
