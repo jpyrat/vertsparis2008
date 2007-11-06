@@ -1,0 +1,139 @@
+  /* articles accueil et liste-articles */
+  
+.edito {
+	border-bottom:1px dashed #AAAAAA;
+	line-height:1.4;
+}
+.chapo_debat, .chapo {margin-bottom:5px;padding-bottom:5px;margin-top:5px;padding-top:5px;}
+.article h3 {margin-bottom:5px;padding-bottom:5px;}
+  
+
+/* mise en page de l'accueil */ 
+.bloc_sommaire {
+	float:left;
+	width:270px;
+	height:100px;
+	margin:10px;
+	display:inline;
+}
+div.bloc_sommaire div.article {
+	float:none;display:inline;
+}
+
+
+
+.bloc_milieu {
+	float:left;
+	height:240px;
+	margin:10px;
+	margin-top:20px;
+	text-align:center;
+	display:inline;
+}
+
+.bloc_milieu2 {
+	float:left;
+	height:800px;
+	margin:10px;
+	margin-top:20px;
+	text-align:center;
+	display:inline;
+}
+
+div.bloc_milieu2 div.affiche{
+	/* clear:both; */
+	width:190px;
+	height:225px;
+	margin:21px;
+	margin-bottom:21px;
+	padding-bottom:20px;
+	display:inline;
+}
+
+div.bloc_milieu div.affiche {
+	/* clear:both; */
+	width:190px;
+	height:210px;
+	margin:21px;
+	display:inline;
+}
+
+.imgintertitre {margin-left:10px;}
+
+
+p.debut_articles {
+	margin:5px 0;float:none;font-size:80%;display:inline;
+} 
+.bloc_sommaire a.en_savoir_plus {
+float:right;margin-top:10px;display:inline;
+}
+/* fin accueil */
+
+div.article {clear:left;margin: 10px;padding:0px;display:block;}
+div.article img {margin: 0px 10px 10px 0;float:left;display:inline;}
+
+
+a.titre-article {padding-left:20px;display:inline;}
+a.titre-article {
+    background-image: url("../images/fleche_debat_v.gif");
+    background-repeat: no-repeat;
+    background-position: left center;}
+    
+div.article a.titre-article {
+    background-image: url("../images/fleche_v.gif");}
+
+#autres_lien {
+	margin-left:150px;}   
+       /* exception page centrale. faute de temps, une image...  */
+       
+#img_centre_som {margin : 10px;}
+
+/*.article {clear:both;} */
+
+    /* d. liens liste-articles */
+    
+#article_debat  h3 a,
+#article h3 a { color: #5E8626; font-weight: bold;text-transform:uppercase;}
+    
+
+
+a.article_precedent {float:left;display:block;}
+a.article_suivant {float:right;display:block;}
+
+a.titre-article, a.titre-article:link, a.titre-article:visited { color: #000; font-weight: bold;}
+a.titre-article:hover { color: #AAA;}
+
+a.interrogation  {display:inline;padding-left:25px;margin:5px;}
+a.en_savoir_plus, a.propositions {display:inline;padding-left:20px}
+a.en_savoir_plus, a.propositions, a.interrogation {
+    background-repeat: no-repeat;
+    background-position: left center;}
+a.en_savoir_plus {   
+    background-image: url("../images/plus_v.gif");float:right;}
+a.propositions {   
+    background-image: url("../images/fleche_v.gif");}
+    
+a.interrogation {
+    display:block;
+    background-image: url("../images/interrogation_vert.gif");}
+
+#article_debat a.en_savoir_plus { float:right; }   
+
+/* class pour marquer l'arternance des articles */
+.fond_vert {background-color:#DAEABD;}
+.proposition1 {background-color:#FFF;}
+.proposition2 {background-color:#DAEABD;}
+.article_propa {
+	border-top: 1px dashed #AAAAAA;
+	border-bottom: 1px dashed #AAAAAA;
+}
+   /* 5. liserets et cadres */
+
+/*div.article, 
+.chapo_debat {border-top: 1px dashed #AAAAAA;}*/
+.article h3,
+/*div#article_debat p  {border-bottom: 1px dashed #AAAAAA;}*/
+
+.chapo,
+#article_accueil_principale p,
+.article_accueil_secondaire p {border-bottom: 1px dashed #AAAAAA;border-top: 1px dashed #AAAAAA;}

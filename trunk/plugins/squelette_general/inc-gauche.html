@@ -1,0 +1,14 @@
+[(#REM) menu gauche]
+
+<div id="navigation">
+            <!-- menu principal : debats, dossiers, candidats -->
+<BOUCLE_exclu_menu(RUBRIQUES) {titre_mot=PasDansMenu}{doublons}></BOUCLE_exclu_menu>
+<BOUCLE_rubriques(RUBRIQUES) {racine} {par num titre, titre}{doublons}>
+	<a href="#URL_RUBRIQUE" id="rub_#ID_RUBRIQUE"[ title="(#TITRE|attribut_html)"]></a>
+</BOUCLE_rubriques>
+            
+            <!-- Positionnement pour le module "navigation via la carte"
+            <div id="carte_paris">
+                <img src='#CHEMIN{images/carte_paris.gif}' alt="votre arrondissement" />
+            </div> -->
+</div>

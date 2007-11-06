@@ -1,0 +1,33 @@
+<meta http-equiv="content-type" content="text/html; charset=#CHARSET" />
+<meta name="generator" content="SPIP,lipton,firebug" />
+<!-- liens vers les elements css -->
+<link rel="stylesheet" href="#CHEMIN{css/vert_base_2.css}" type="text/css" media="all" />
+<link rel="stylesheet" href="#CHEMIN{css/vert_annexes.css}" type="text/css" media="all" />
+<link rel="stylesheet" href="#CHEMIN{css/vert_articles.css}" type="text/css" media="all" />
+<link rel="stylesheet" href="#CHEMIN{css/vert_propositions.css}" type="text/css" media="all" />
+<style type="text/css">
+<BOUCLE_exclu_menu(RUBRIQUES) {titre_mot=PasDansMenu}{doublons}></BOUCLE_exclu_menu>
+<BOUCLE_rubriques(RUBRIQUES) {racine} {par num titre, titre}{doublons}>
+a#rub_#ID_RUBRIQUE {
+	display:block;
+	margin:0;
+	padding:0;
+	border: 0;
+	[background-image: url("(#LOGO_RUBRIQUE_NORMAL||extraire_attribut{src})");]
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	[height: (#LOGO_RUBRIQUE_NORMAL||extraire_attribut{height}|div{2})px;]
+	width: 180px;
+}
+[a#rub_#ID_RUBRIQUE:hover {
+	background-position: 0 -(#LOGO_RUBRIQUE_NORMAL||extraire_attribut{height}|div{2})px;
+}]
+</BOUCLE_rubriques>
+[div#container {
+    width:(#LOGO_SITE_SPIP||extraire_attribut{width})px;
+    }
+]
+</style>
+<link rel="shortcut icon" type="images/x-icon" href="/#CHEMIN{images/favicon.ico}" />
+<!-- liens vers les elements javascript -->
+#INSERT_HEAD

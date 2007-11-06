@@ -1,0 +1,43 @@
+[(#REM) article]
+#CACHE{86400}
+<BOUCLE_article_principal(ARTICLES) {id_article}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr" dir="ltr">
+<head>
+<title>[#NOM_SITE_SPIP]</title>
+<INCLURE{fond=inc-head}>
+</head>
+<body>
+    <div id="container">
+        <!-- haut de page : la banniere (lien constant vers l'accueil) -->
+        <INCLURE{fond=inc-entete}>
+        <div id="wrapper">
+            
+            <div id="content">
+                <!-- le fil d'ariane -->
+                <div id="fil_ariane">
+		<a href="#URL_SITE_SPIP/"><:accueil_site:></a><BOUCLE_ariane(HIERARCHIE){id_article}>&nbsp;&raquo;&nbsp;<a href="#URL_RUBRIQUE">[(#TITRE|supprimer_numero|couper{80})]</a></BOUCLE_ariane>[&nbsp;&raquo;&nbsp;(#TITRE|supprimer_numero|couper{80})]
+		</div>
+                <!-- titre du contenu de la page -->
+                <h2>[(#TITRE|supprimer_numero)]</h2>
+                <!-- (un chapo)  -->
+                [<h3 class="chapo">(#CHAPO)</h3>]
+                <!-- ARTICLE PRINCIPALE DE L'ACCUEIL -->                
+                <div class="article">
+                    [<img src='(#LOGO_ARTICLE_RUBRIQUE||image_reduire{151,0}|extraire_attribut{src})' width="[(#LOGO_ARTICLE_RUBRIQUE||image_reduire{151,0}|extraire_attribut{width})]" height="[(#LOGO_ARTICLE_RUBRIQUE||image_reduire{151,0}|extraire_attribut{height})]" alt="" />]
+                    <h3><a href="spip.php?article" class="titre-article">#TITRE</a></h3>
+                    <div class="debut_articles">#TEXTE</div>
+                </div>
+		[(#REM) Forum de l'article ]
+			<a href="#forum" name="forum" id="forum"></a>
+			[<h4 class="forum-repondre"><a href="(#PARAMETRES_FORUM|url_reponse_forum)"><:repondre_article:></a></h4>]
+			<INCLURE{fond=inc-forum}{id_article}>
+            </div>
+        </div>
+        <INCLURE{fond=inc-gauche}>
+        <INCLURE{fond=inc-droite}>
+        <INCLURE{fond=inc-pied}>
+    </div>
+</body>
+</html>
+</BOUCLE_article_principal>

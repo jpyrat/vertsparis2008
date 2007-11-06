@@ -1,0 +1,4 @@
+#CACHE{30*24*3600}
+<BOUCLE_Evenement(EVENEMENTS){statut=publie}{id_evenement}>
+<B_ArticleConcerne><li [title="(#LIEU|attribut_html)"]>[<strong>(#DATE_DEBUT|Agenda_affdate_debut_fin{#DATE_FIN,#HORAIRE})&nbsp;:</strong><br />]<BOUCLE_ArticleConcerne(ARTICLES){id_article}><a href="#URL_ARTICLE"[ hreflang="(#LANG)"]>[#DEBUT_SURLIGNE(#TITRE|supprimer_numero|texte_script)#FIN_SURLIGNE]</a>[&nbsp;: #DEBUT_SURLIGNE(#_Evenement:TITRE|supprimer_numero|=={[(#TITRE|supprimer_numero)]}|?{'',[(#_Evenement:TITRE|supprimer_numero)]})#FIN_SURLIGNE]</BOUCLE_ArticleConcerne></li></B_ArticleConcerne>
+</BOUCLE_Evenement>

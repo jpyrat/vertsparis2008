@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr" dir="ltr">
+<head>
+<title>[#NOM_SITE_SPIP]</title>
+<INCLURE{fond=inc-head}>
+</head>
+<body>
+    <div id="container">
+        <!-- haut de page : la banniere (lien constant vers l'accueil) -->
+        <INCLURE{fond=inc-entete}>
+        <div id="wrapper">
+            <div id="content">
+                <!-- titre du contenu de la page (un chapo ?) -->
+                <h2 class="majuscule">Les d&eacute;bats</h2>
+                <!-- debut de la liste des articles disponibles -->
+		<BOUCLE_ALaUne(ARTICLES){titre_mot=ALaUne}>
+                <div class="article">
+		<h3 class="chapo">[(#TITRE|supprimer_numero)]</h3>
+                    [<div id="marcistheboss">(#LOGO_ARTICLE||image_reduire{235,0})</div>]
+	<h3><a class="propositions" href="#URL_RUBRIQUE">participer au d&eacute;bat</a></h3>
+	<div class="edito">[(#TEXTE|couper{350})</div><a class="en_savoir_plus" href="#URL_RUBRIQUE" title="[(#TITRE|supprimer_numero)]">en savoir plus</a>]
+	</div>
+		</BOUCLE_ALaUne>
+
+	<BOUCLE_PictoCampagneSommaire(MOTS){titre=PictoCampagneSommaire}>
+	[(#LOGO_MOT||inserer_attribut{class,imgintertitre})]
+	</BOUCLE_PictoCampagneSommaire>
+
+
+	<INCLURE{fond=inc-milieu-sommaire}>
+
+
+	<BOUCLE_PictoMilieuSommaire(MOTS){titre=PictoMilieuSommaire}>
+	[(#LOGO_MOT||inserer_attribut{class,imgintertitre})]
+	</BOUCLE_PictoMilieuSommaire>
+
+	<INCLURE{fond=inc-centre-sommaire}>
+
+            </div>
+        </div>
+        <INCLURE{fond=inc-gauche}>
+        <INCLURE{fond=inc-droite}>
+        <INCLURE{fond=inc-pied}>
+    </div>
+</body>
+</html>

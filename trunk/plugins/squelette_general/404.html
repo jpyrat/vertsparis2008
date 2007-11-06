@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr" dir="ltr">
+<head>
+<title>Erreur 404 [#NOM_SITE_SPIP]</title>
+<INCLURE{fond=inc-head}>
+</head>
+<body>
+    <div id="container">
+        <!-- haut de page : la banniere (lien constant vers l'accueil) -->
+        <INCLURE{fond=inc-entete}>
+        <div id="wrapper">
+            <div id="content">
+                <!-- titre du contenu de la page (un chapo ?) -->
+ 
+			<div class="chapo"><h3>Cette page n'existe pas</h3></div>
+			[<div class="chapo">(#ENV*{erreur}|propre)</div>]
+
+            </div>
+        </div>
+        <INCLURE{fond=inc-gauche}>
+        <INCLURE{fond=inc-droite}>
+        <INCLURE{fond=inc-pied}>
+    </div>
+</body>
+</html>

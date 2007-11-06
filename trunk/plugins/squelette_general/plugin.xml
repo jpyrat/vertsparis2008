@@ -1,0 +1,15 @@
+<plugin>
+	<!-- Nom du plugin -->
+	<nom>Squelette G&#233;n&#233;ral</nom>
+	<!-- Auteur du plugin -->
+	<auteur>RealET, Marc H&#233;ron, Achille _ &copy; 2007 - Distribu&#233; sous licence GNU/LGPL</auteur>
+	<version>0.2</version>
+	<etat>dev</etat>
+	<icon></icon>
+	<description>Squelette en cours de g&#233;n&#233;ralisation</description>
+	<!-- URI de documentation -->
+	<lien></lien>
+	<!-- precise le prefixe utilise pour toutes les fonctions du plugin, en general le nom du plugin -->
+	<prefix>SqueletteGeneral</prefix>
+	<chemin dir='' />
+</plugin>

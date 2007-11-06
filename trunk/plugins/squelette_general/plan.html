@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr" dir="ltr">
+<head>
+<title>Plan du site [#NOM_SITE_SPIP]</title>
+<INCLURE{fond=inc-head}>
+</head>
+<body>
+    <div id="container">
+        <!-- haut de page : la banniere (lien constant vers l'accueil) -->
+        <INCLURE{fond=inc-entete}>
+        <div id="wrapper">
+            <div id="content">
+                <!-- titre du contenu de la page (un chapo ?) -->
+                <h2><:plan_site:></h2>
+			<BOUCLE_exclu_menu(RUBRIQUES) {titre_mot=PasDansMenu}{doublons}></BOUCLE_exclu_menu>
+				<BOUCLE_secteurs(RUBRIQUES) {racine}{par titre}{doublons}>
+
+				<h3><a href="#URL_RUBRIQUE">[(#TITRE|supprimer_numero)]</a></h3>
+
+				[(#REM) Articles et sous-rubriques ]
+
+				<div class="contre-encart">
+
+					<B_articles_racine>
+					<h4 class="invisible"><:articles:></h4>
+					<ul>
+						<BOUCLE_articles_racine(ARTICLES) {id_rubrique} {par titre}>
+						<li><a href="#URL_ARTICLE">[(#TITRE|supprimer_numero)]</a></li>
+						</BOUCLE_articles_racine>
+					</ul>
+					</B_articles_racine>
+
+					<B_rubriques>
+					<ul>
+						<BOUCLE_rubriques(RUBRIQUES) {id_parent} {par titre}>
+						<li><strong><a href="#URL_RUBRIQUE">[(#TITRE|supprimer_numero)]</a></strong>
+
+							<B_articles>
+							<ul>
+								<BOUCLE_articles(ARTICLES) {id_rubrique} {par titre}>
+								<li><a href="#URL_ARTICLE">[(#TITRE|supprimer_numero)]</a></li>
+								</BOUCLE_articles>
+							</ul>
+							</B_articles>
+
+							<BOUCLE_sous_rubriques(BOUCLE_rubriques)></BOUCLE_sous_rubriques>
+
+						</li>
+						</BOUCLE_rubriques>
+
+					</ul>
+					</B_rubriques>
+
+				</div><!-- fin contre-encart -->
+<!-- 
+				<div class="encart">
+
+				[(#REM) Breves ]
+				<B_breves>
+				<div class="breves">
+					<h3 class="menu-titre"><:breves:></h3>
+					<ul>
+						<BOUCLE_breves(BREVES) {id_secteur} {par date}{inverse}>
+						<li><a href="#URL_BREVE">[(#TITRE|supprimer_numero)]</a></li>
+						</BOUCLE_breves>
+					</ul>
+				</div>
+				</B_breves>
+
+				[(#REM) Sur le Web ]
+				<B_sites>
+				<div class="syndic">
+					<h3 class="menu-titre"><:sites_web:></h3>
+					<ul>
+						<BOUCLE_sites(SITES) {id_secteur} {par nom_site}>
+						<li><a href="[(#ID_SYNDIC|generer_url_site)]">#NOM_SITE</a></li>
+						</BOUCLE_sites>
+					</ul>
+				</div>
+				</B_sites>
+
+				</div>
+fin encart -->
+
+				</BOUCLE_secteurs>
+			
+            </div>
+        </div>
+        <INCLURE{fond=inc-gauche}>
+        <INCLURE{fond=inc-droite}>
+        <INCLURE{fond=inc-pied}>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+[(#REM) article]
+#CACHE{86400}
+<BOUCLE_auteur_principal(AUTEURS) {id_auteur}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr" dir="ltr">
+<head>
+<title>[(#NOM|supprimer_numero|attribut_html)] [#NOM_SITE_SPIP]</title>
+<INCLURE{fond=inc-head}>
+</head>
+<body>
+    <div id="container">
+        <!-- haut de page : la banniere (lien constant vers l'accueil) -->
+        <INCLURE{fond=inc-entete}>
+        <div id="wrapper">
+            
+            <div id="content">
+                <!-- le fil d'ariane -->
+                <div id="fil_ariane">
+		<a href="#URL_SITE_SPIP/"><:accueil_site:></a>[&nbsp;&raquo;&nbsp;(#NOM|couper{80})]</div>
+                <!-- titre du contenu de la page -->
+		<h2>[(#TITRE|supprimer_numero)]</h2>
+                <!-- (un chapo)  -->
+                
+                <!-- ARTICLE PRINCIPALE DE L'ACCUEIL, en t�te de gondole -->                
+                <div class="article">
+	[(#LOGO_AUTEUR||image_reduire{200,200})]
+				<h1 class="#EDIT{qui} titre">#NOM</h1>
+				[<p class="#EDIT{hyperlien} soustitre"><:voir_en_ligne:> : <a href="(#URL_SITE)" class="spip_out">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></p>]
+			</div>
+
+			[<div class="#EDIT{bio} texte">(#BIO)</div><br />]
+			<br class="nettoyeur" />
+
+			[<div class="encart">
+			(#FORMULAIRE_ECRIRE_AUTEUR)
+			</div><!-- fin encart -->]
+		
+            </div>
+        </div>
+        <INCLURE{fond=inc-gauche}>
+        <INCLURE{fond=inc-droite}>
+        <INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
+	
+    </div>
+</body>
+</html>
+</BOUCLE_auteur_principal>
