@@ -110,7 +110,7 @@ function create_rubrique($titre, $id_parent='0', $descriptif='') {
 		$id_rubrique = spip_insert_id();
 	}
 	$titre = stripslashes($titre);
-	echo "<li>Rubrique: $titre (<a href='?exec=naviguer&id_rubrique=$id_rubrique'>$id_rubrique</a>)</li>";
+	echo "<li>Rubrique: $titre (<a href='?exec=naviguer&amp;id_rubrique=$id_rubrique'>$id_rubrique</a>)</li>";
 	return $id_rubrique;
 }
 
@@ -124,7 +124,7 @@ function create_article($titre, $id_parent='0', $descriptif='') {
 		$id_article = spip_insert_id();
 	}
 	$titre = stripslashes($titre);
-	echo "<li>Articles: $titre (<a href='?exec=naviguer&id_article=$id_article'>$id_article</a>)</li>";
+	echo "<li>Articles: $titre (<a href='?exec=naviguer&amp;id_article=$id_article'>$id_article</a>)</li>";
 	return $id_article;
 }
 
