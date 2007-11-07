@@ -1,0 +1,21 @@
+#HTTP_HEADER{Content-Type: text/plain;}
+
+<:bonjour:>,Voici les nouveaut�s publi�es sur le site #NOM_SITE_SPIP
+Si ce courrier ne s'affiche pas, vous pouvez le visualiser sur le site : [(#URL_PAGE{liste_mail}|parametre_url{'pst_id',#PST_ID,mode,lettreseule})]
+Vous pouvez vous d�sabonner de cette newsletter
+	
+	Courrier
+		<BOUCLE_affichage(ARTICLES){titre_mot=Courrier_libre}{!par date}{0,1}>
+		[(#SURTITRE|textebrut|PyratprepareNLtexte)]
+		[(#TITRE|textebrut|PyratprepareNLtexte)]
+		[(#SOUSTITRE|textebrut|PyratprepareNLtexte)]
+		[(#DATE|affdate)], par  [(#LESAUTEURS|textebrut|PyratprepareNLtexte)]
+		[(#DESCRIPTIF|textebrut|PyratprepareNLtexte)]
+		[(#CHAPO|textebrut|PyratprepareNLtexte)]
+						
+		[(#TEXTE|liens_absolus|textebrut|PyratprepareNLtexte)]
+		[(#PS|textebrut|PyratprepareNLtexte)]
+		[(#NOTES|textebrut|PyratprepareNLtexte)]
+		</BOUCLE_affichage>
+					
+[(#CONFIG{soyezcreateurs/bandeau_contact}|propre)]

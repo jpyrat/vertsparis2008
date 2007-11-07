@@ -1,0 +1,370 @@
+#CACHE{30*24*3600}
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html>
+	<head>
+		<title>Lettre libre</title>
+		
+<style type="text/css"> 
+html, body	
+{
+	margin: 0;
+	padding: 0;
+	background-color: #53B0DE;
+}
+
+div {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+a
+{
+	color:#9999ff;
+	text-decoration:none;
+}   
+
+a:hover
+{
+	color:#FF9900;
+	text-decoration:underline;
+}
+
+#containerlettre 
+{
+	color: #222;
+	padding-top:1px !important;
+	margin-bottom: 4em !important;
+}
+
+.entete
+{
+	margin: 0 5px 0 5px;
+	margin-bottom: 2em;
+	border: 1px solid;
+	padding: 0.9em;
+	font-size: 0.82em;
+	line-height: 1.4em;
+	background : #6699CC;
+	color:#fff;
+	-moz-border-radius: 1em;
+}
+
+.tdentete
+{
+	background: #fff;
+}
+
+.entete a
+{
+	color:#FFF;
+	font-weight: bold;
+}
+
+.entete a:hover
+{
+	color:#FF9900;
+}
+.cartouche
+{
+	position: relative;
+}
+
+.surtitre, .soustitre, .datepublication {
+	position: relative;
+	font-style: italic;
+	font-weight: bold;
+	font-size: .9em;
+	color: #076b8b;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.datepublication {
+	float: right;
+	z-index: 100;
+	font-size: .8em;
+	font-style: italic;
+	background: transparent;
+	padding: 0 5px 0 0;
+	-moz-border-radius-bottomleft: 1em;
+}
+
+.surtitre span, .soustitre span {
+	padding: 0px 1em 0px 1em;
+}
+
+.surtitre span {
+	background: #CDECFA;
+	padding: 1px .5em;
+	-moz-border-radius-topright: 1em;
+}
+
+.soustitre span {
+	background: #CDECFA;
+	padding: 0 .5em 1px .5em;
+	-moz-border-radius-bottomleft: 1em;
+}
+
+img {
+	border: 0px;
+	z-index: 0;
+}
+
+#lettre {
+	position: relative;
+	background: transparent;
+	margin: 0;
+	padding:0;
+	-moz-border-radius-topleft: 1em;
+	background-color: #fff;
+}
+
+#lettre img {
+	border-width: 1px;
+	padding-bottom: 0px;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	padding-top: 0px;
+}
+
+#lettre h1 {
+	color: #00A22A;
+	background-color: #F8FEFF;
+	font-size: 2.2em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin-bottom: 0em;
+	margin-top: 0em;
+	margin-right: 0;
+	margin-left: 0;
+	padding-top: 0.5em;
+	padding-left: .5em;
+	padding-bottom: 0.5em;
+	padding-right: 50px;
+	border-bottom: 4px solid #F2F8F9;
+}
+
+#lettre h2
+{
+	margin: 0px;
+	padding: 0 0 0 5px;
+}
+
+#lettre img
+{
+	padding: 0 0 0 5px;
+}
+
+.contenu2
+{
+	width: 700px;
+	background-color: #fff;
+}
+
+.extra2
+{
+	width: 200px;
+	background-color: #C0C0C0;
+	padding-top: 0px;
+}
+
+.logo_article {
+	float:left;
+	margin: 10px 5px 10px 5px;
+}
+
+.descriptif, .chapo {
+	background-color: #FFFFFF;
+	border: 1px solid #B4C2C2;
+	font-size: 1em;
+	font-weight: normal;
+	text-align: justify;
+	padding: 2px 1em 3px 1em;;
+	z-index: 99;
+	clear: left;
+	margin: 1em 5px 0 5px;
+}
+
+table
+{
+	width: 900px;
+}
+
+#logosite {
+	text-align: center;
+	background-color: #fff;
+	height: auto;
+}
+
+.extra2 ul li {
+	padding: 0;
+}
+
+.extra2 ul li a {
+	background: transparent;
+	padding: 1px;
+	margin: 0px;
+	color: #fff;
+}
+
+.extra2 ul li a:hover {
+	color: #FF6600;
+	text-decoration: none;
+}
+
+.extra2 ul li a:active {
+	color: #f93;
+	text-decoration: none;
+}
+
+.extra2 h3 {
+	color: #076b8b;
+	background-color: #FFFFFF;
+	font-size: 1.2em;
+	font-weight: bold;
+	line-height: 1.5em;
+	margin-bottom: 0px;
+	margin-top: 0.5em;
+	padding-left: 10px;
+	clear: left;
+}
+
+.extra2 h4 {
+	color: #076b8b;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 100%;
+	clear: left;
+	border-left: 1px solid #cdecfa;
+	margin: 5px 4px 5px 4px;
+	padding-left: 3em;
+	display: block;
+	background-color: #9bdcfa;
+	-moz-border-radius: 1em;
+}
+
+#bandeaucontact2 {
+	color: #FFF;
+	background-color: #016796;
+	font-size: 1em; margin:0;
+	width: auto !important;
+	text-align: center;
+	border-bottom: 1px solid #9B9B9B;
+	padding: 1px;
+}
+
+#letexte_lettre {
+	font-size: 1.1em;
+	line-height: 120%;
+	padding: 0 30px;
+	clear: left;
+}
+
+.ps {
+	background-color: #f8f8f8;
+	border: 1px dashed #cccccc;
+	font-size: .9em;
+	font-weight: normal;
+	text-align: justify;
+	padding: 2px .5em 2px .5em;;
+	margin-top: 1em;
+	margin-bottom: .5em;
+	clear: both;
+	position: relative;
+}
+
+.notes {
+	border-top: 1px solid #ccccff;
+	border-left: 2px solid #ccccff;
+	font-size: 1em;
+	line-height: 120%;
+	padding: .5em 1em 1em 10px;
+	margin: 1em 0 1em 0;
+	background-color: #ffffcc;
+	color: #000066;
+	-moz-border-radius-bottomright: 50%;
+}
+
+</style>
+
+	</head>
+	<body> 
+	<div id="containerlettre"> 
+		<table align="center" cellspacing="0"  cellpadding="0">
+			<tr>
+				<td class="tdentete">
+					<div  class="entete">
+					<:bonjour:>, <br />Vous avez re&ccedil;u un courrier de la part du site  <a href="#URL_SITE_SPIP">#NOM_SITE_SPIP</a>
+					</div>
+					<p id="viewonline">Si ce courrier ne s'affiche pas, vous pouvez le <a href="[(#URL_PAGE{liste_mail}|parametre_url{'pst_id',#PST_ID,mode,lettreseule})]" title="#NOM_SITE_SPIP">visualiser sur le site</a></p>
+					<p>Vous pouvez vous <a href="@@URL_DESINSCRIPTION@@" title="Desabonner">d�sabonner</a> de cette newsletter</p>
+				</td>
+				<td>
+					[(#CONFIG{soyezcreateurs/logoheader,navigation}|=={navigation}|?{' ',''})
+					[<div id="logosite">(#LOGO_SITE_SPIP_NORMAL||url_absolue|logo_swf_or_img{
+					#LOGO_SITE_SPIP_NORMAL||url_absolue|extraire_attribut{width},
+					#LOGO_SITE_SPIP_NORMAL||url_absolue|extraire_attribut{height},
+					<:pyrat:retouraccueil:> [(#NOM_SITE_SPIP|supprimer_tags)],
+					"/",
+					"",
+					#LOGO_SITE_SPIP_SURVOL|url_absolue}
+					)</div>]
+					]
+				</td>
+			</tr>
+			<tr>
+				<td class="contenu2">
+					<div id="lettre">
+					<BOUCLE_articles(ARTICLES){titre_mot=Courrier_libre}{!par date}{0,1}>
+						<div class="cartouche">
+							<h1>Courrier</h1>
+							[<div class="surtitre"><span>(#SURTITRE)</span></div>]
+							<div>
+								<h2 class="logo_article">
+								[(#LOGO_ARTICLE_NORMAL||url_absolue|logo_swf_or_img{
+								64,
+								64,
+								[(#TITRE|texte_script|supprimer_tags|entites_html|supprimer_numero) (logo)],
+								"",
+								"logo_article",
+								#LOGO_ARTICLE_SURVOL||url_absolue|image_reduire{64,64}}
+								)][#DEBUT_SURLIGNE(#TITRE|Supprimer_numero)#FIN_SURLIGNE][(#CONFIG{plugin}|match{ARTICLE_PDF}|?{' '})#ARTICLE_PDF]
+								</h2>
+							</div>
+						</div> <!-- FIn .cartouche -->
+						[<div class="soustitre"><span>(#SOUSTITRE)</span></div>]
+						<div class="datepublication"><span>[(#DATE|affdate)], par  #LESAUTEURS</span></div>
+						<div class="chapo">
+							[<div>(#DESCRIPTIF)</div>]		
+							[<div>(#CHAPO)</div>]
+						</div>	
+							<div id="letexte_lettre">
+								[(#TEXTE|liens_absolus)]
+								[<div class="ps">(#PS)</div>]
+								[<div class="notes">(#NOTES)</div>]
+							</div><!-- FIn #letexte_lettre>-->
+						</BOUCLE_articles>
+					</div><!-- Fin de #lettre -->
+				</td>
+				<td class="extra2" valign="top">
+					<h3>Sommaire</h3>
+					<h4>Derniers courriers envoy&eacute;s</h4>
+					<ul>
+					<BOUCLE_sommairearticles(ARTICLES){titre_mot=Courrier_libre}{!par date}{0,15}{exclus}>
+						<li><a href="#URL_ARTICLE">#TITRE</a></li>
+					</BOUCLE_sommairearticles>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<div id="bandeaucontact2">
+						[(#CONFIG{soyezcreateurs/bandeau_contact}|propre)]
+					</div><!-- #bandeaucontact2 -->
+				</td>
+			</tr>
+		</table>
+	</div> <!--Fin #contenu2 -->
+	</body>
+</html>
