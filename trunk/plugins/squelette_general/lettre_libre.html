@@ -288,20 +288,13 @@ table#tlettre {
 					<:bonjour:>, <br />Vous avez re&ccedil;u un courrier de la part du site <br /><a href="#URL_SITE_SPIP">#NOM_SITE_SPIP</a>
 					</div>
 					<div id="viewonline">Si ce courrier ne s'affiche pas, vous pouvez le <a href="#URL_ARTICLE" title="#TITRE &mdash; #NOM_SITE_SPIP">visualiser sur le site</a></div>
-					<div>Vous pouvez vous <a href="@@URL_DESINSCRIPTION@@" title="Desabonner">désabonner</a> de cette newsletter</div>
+					<div>Vous pouvez vous <a href="@@URL_DESINSCRIPTION@@" title="Desabonner">dï¿½sabonner</a> de cette newsletter</div>
 				</td>
 				<td colspan="1" rowspan="2" valign="top" style="height:100%;" class="ahem">
 					<table cellspacing="0"  cellpadding="0" style="height:100%;">
 						<tr valign="top">
 							<td id="tdlogo" valign="top" style="height:220px;">
-								[<div id="logosite">(#LOGO_SITE_SPIP_NORMAL||logo_swf_or_img{
-								#LOGO_SITE_SPIP_NORMAL||extraire_attribut{width},
-								#LOGO_SITE_SPIP_NORMAL||extraire_attribut{height},
-								<:pyrat:retouraccueil:> [(#NOM_SITE_SPIP|supprimer_tags)],
-								"/",
-								"",
-								#LOGO_SITE_SPIP_SURVOL}
-								)</div>]
+								[<div id="logosite">(#LOGO_SITE_SPIP_NORMAL)</div>]
 							</td>
 						</tr>
 						<tr>
@@ -325,13 +318,7 @@ table#tlettre {
 							[<div class="surtitre"><span>(#SURTITRE)</span></div>]
 							<div>
 								<h2 class="logo_article">
-								[(#LOGO_ARTICLE_NORMAL||logo_swf_or_img{
-								64,
-								64,
-								[(#TITRE|texte_script|supprimer_tags|entites_html|supprimer_numero) (logo)],
-								"",
-								"logo_article",
-								#LOGO_ARTICLE_SURVOL||image_reduire{64,64}}
+								[(#LOGO_ARTICLE_NORMAL#LOGO_ARTICLE||image_reduire{64,64}
 								)][#DEBUT_SURLIGNE(#TITRE|Supprimer_numero)#FIN_SURLIGNE][(#CONFIG{plugin}|match{ARTICLE_PDF}|?{' '})#ARTICLE_PDF]
 								</h2>
 							</div>
