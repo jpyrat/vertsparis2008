@@ -291,37 +291,6 @@ table
 	</head>
 	<body> 
 	
-					<div id="lettre">
-					<BOUCLE_articles(ARTICLES){titre_mot=Courrier_libre}{!par date}{0,1}>
-						<div class="cartouche">
-							<h1>Courrier</h1>
-							[<div class="surtitre"><span>(#SURTITRE)</span></div>]
-							<div>
-								<h2 class="logo_article">
-								[(#LOGO_ARTICLE_NORMAL||url_absolue|logo_swf_or_img{
-								64,
-								64,
-								[(#TITRE|texte_script|supprimer_tags|entites_html|supprimer_numero) (logo)],
-								"",
-								"logo_article",
-								#LOGO_ARTICLE_SURVOL||url_absolue|image_reduire{64,64}}
-								)][#DEBUT_SURLIGNE(#TITRE|Supprimer_numero)#FIN_SURLIGNE][(#CONFIG{plugin}|match{ARTICLE_PDF}|?{' '})#ARTICLE_PDF]
-								</h2>
-							</div>
-						</div> <!-- FIn .cartouche -->
-						[<div class="soustitre"><span>(#SOUSTITRE)</span></div>]
-						<div class="datepublication"><span>[(#DATE|affdate)], par  #LESAUTEURS</span></div>
-						<div class="chapo">
-							[<div>(#DESCRIPTIF)</div>]		
-							[<div>(#CHAPO)</div>]
-						</div>	
-							<div id="letexte_lettre">
-								[(#TEXTE|liens_absolus)]
-								[<div class="ps">(#PS)</div>]
-								[<div class="notes">(#NOTES)</div>]
-							</div><!-- FIn #letexte_lettre>-->
-						</BOUCLE_articles>
-					</div><!-- Fin de #lettre -->
-				
+					hop
 	</body>
 </html>
