@@ -1,5 +1,4 @@
 #CACHE{0}
-<BOUCLE_articles(ARTICLES){titre_mot=Courrier_libre}{!par date}{age<7}>
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html>
 	<head>
@@ -311,7 +310,7 @@ table#tlettre {
 				<td class="contenu2">
 					<div id="lettre">
 						<div class="cartouche">
-							<h1>#NOM_SITE_SPIP</h1>
+							<h1>#NOM_SITE_SPIP</h1><BOUCLE_articles(ARTICLES){titre_mot=Courrier_libre}{!par date}{age<7}>
 							[<div class="surtitre"><span>(#SURTITRE)</span></div>]
 							<div>
 								<h2 class="logo_article">
@@ -331,6 +330,7 @@ table#tlettre {
 								[<div class="ps">(#PS)</div>]
 								[<div class="notes">(#NOTES)</div>]
 							</div><!-- FIn #letexte_lettre>-->
+						</BOUCLE_articles>
 					</div><!-- Fin de #lettre -->
 				</td>
 				
@@ -344,4 +344,3 @@ table#tlettre {
 	</div> <!--Fin #containerlettre -->
 	</body>
 </html>
-</BOUCLE_articles>
