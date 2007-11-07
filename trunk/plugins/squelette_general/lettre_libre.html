@@ -290,31 +290,7 @@ table
 
 	</head>
 	<body> 
-	<div id="containerlettre"> 
-		<table align="center" cellspacing="0"  cellpadding="0">
-			<tr>
-				<td class="tdentete">
-					<div  class="entete">
-					<:bonjour:>, <br />Vous avez re&ccedil;u un courrier de la part du site  <a href="#URL_SITE_SPIP">#NOM_SITE_SPIP</a>
-					</div>
-					<p id="viewonline">Si ce courrier ne s'affiche pas, vous pouvez le <a href="[(#URL_PAGE{liste_mail}|parametre_url{'pst_id',#PST_ID,mode,lettreseule})]" title="#NOM_SITE_SPIP">visualiser sur le site</a></p>
-					<p>Vous pouvez vous <a href="@@URL_DESINSCRIPTION@@" title="Desabonner">d�sabonner</a> de cette newsletter</p>
-				</td>
-				<td>
-					[(#CONFIG{soyezcreateurs/logoheader,navigation}|=={navigation}|?{' ',''})
-					[<div id="logosite">(#LOGO_SITE_SPIP_NORMAL||url_absolue|logo_swf_or_img{
-					#LOGO_SITE_SPIP_NORMAL||url_absolue|extraire_attribut{width},
-					#LOGO_SITE_SPIP_NORMAL||url_absolue|extraire_attribut{height},
-					<:pyrat:retouraccueil:> [(#NOM_SITE_SPIP|supprimer_tags)],
-					"/",
-					"",
-					#LOGO_SITE_SPIP_SURVOL|url_absolue}
-					)</div>]
-					]
-				</td>
-			</tr>
-			<tr>
-				<td class="contenu2">
+	
 					<div id="lettre">
 					<BOUCLE_articles(ARTICLES){titre_mot=Courrier_libre}{!par date}{0,1}>
 						<div class="cartouche">
@@ -346,25 +322,6 @@ table
 							</div><!-- FIn #letexte_lettre>-->
 						</BOUCLE_articles>
 					</div><!-- Fin de #lettre -->
-				</td>
-				<td class="extra2" valign="top">
-					<h3>Sommaire</h3>
-					<h4>Derniers courriers envoy&eacute;s</h4>
-					<ul>
-					<BOUCLE_sommairearticles(ARTICLES){titre_mot=Courrier_libre}{!par date}{0,15}{exclus}>
-						<li><a href="#URL_ARTICLE">#TITRE</a></li>
-					</BOUCLE_sommairearticles>
-					</ul>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center">
-					<div id="bandeaucontact2">
-						[(#CONFIG{soyezcreateurs/bandeau_contact}|propre)]
-					</div><!-- #bandeaucontact2 -->
-				</td>
-			</tr>
-		</table>
-	</div> <!--Fin #contenu2 -->
+				
 	</body>
 </html>
