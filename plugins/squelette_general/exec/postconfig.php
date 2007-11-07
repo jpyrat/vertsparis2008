@@ -180,7 +180,7 @@ function config_site() {
 		create_mot("_SpecialisationArticle", "Proposition", "Pour tous les articles qui sont une proposition", "");
 
 		create_mot("_SpecialisationArticle", "video", "À affecter aux articles destinés à être pris au hasard pour afficher un lien vers une vidéo.\n\nLa vidéo doit avoir une vignette personnalisée.", "");
-
+		create_mot("_SpecialisationArticle", "Courrier_libre", "À affecter aux articles destinés à être pris pour la newsletter","");
 
 	create_groupe("_SpecialisationRubrique", "Un mot clef pris dans ce groupe permettra de modifier le comportement dune rubrique (et de ses articles)", "", 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non');
 
@@ -206,7 +206,7 @@ function config_site() {
 		$ul_ouvert = false;
 	}
 
-	// Liaison entre rubrique et mot cl�
+	// Liaison entre rubrique et mot cl�
 	echo "<ul>\n";
 	create_rubrique_mot('900. Agenda', 'PasDansMenu');
 	echo "</ul>\n";
