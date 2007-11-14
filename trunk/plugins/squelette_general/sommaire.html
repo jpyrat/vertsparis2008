@@ -11,13 +11,13 @@
         <div id="wrapper">
             <div id="content">
                 <!-- titre du contenu de la page (un chapo ?) -->
-                <h2 class="majuscule">Les d&eacute;bats</h2>
+                [<h2 class="majuscule">(#DESCRIPTIF_SITE_SPIP)</h2>]
                 <!-- debut de la liste des articles disponibles -->
 		<BOUCLE_ALaUne(ARTICLES){titre_mot=ALaUne}>
                 <div class="article">
 		<h3 class="chapo">[(#TITRE|supprimer_numero)]</h3>
                     [<div id="marcistheboss">(#LOGO_ARTICLE||image_reduire{235,0})</div>]
-	<h3><a class="propositions" href="#URL_RUBRIQUE">participer au d&eacute;bat</a></h3>
+	<h3><a class="propositions" href="#URL_RUBRIQUE"><:participer_debat:></a></h3>
 	<div class="edito">[(#TEXTE|couper{350})</div><a class="en_savoir_plus" href="#URL_RUBRIQUE" title="[(#TITRE|supprimer_numero)]">en savoir plus</a>]
 	</div>
 		</BOUCLE_ALaUne>
