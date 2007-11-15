@@ -10,6 +10,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'voir_affiche' => 'voir toutes les affiches',
 'reagir_propo' => 'R&eacute;agir&nbsp;&agrave;&nbsp;cette&nbsp;proposition',
 'acces_debat' => 'acc&eacute;der au d&eacute;bat',
+'404' => 'Cette page n\'existe pas',
 
 );
 
