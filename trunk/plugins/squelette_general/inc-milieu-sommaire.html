@@ -1,24 +1,14 @@
 #CACHE{3600}
 	<div class="bloc_milieu">
-	<BOUCLE_afficheune(ARTICLES){id_article=85}>
+	<BOUCLE_afficheune(ARTICLES){titre_mot=MilieuSommaire}>
 
                 
 	[<div class="affiche">(#LOGO_ARTICLE|#URL_ARTICLE)</div>]
 	
 	</BOUCLE_afficheune>
-	<BOUCLE_affichedeux(ARTICLES){id_article=89}>
-
-                
-	[<div class="affiche">(#LOGO_ARTICLE|#URL_ARTICLE)</div>]
 	
-	</BOUCLE_affichedeux>
-	<BOUCLE_affichetrois(ARTICLES){id_article=84}>
-
-                
-	[<div class="affiche">(#LOGO_ARTICLE|#URL_ARTICLE)</div>]
-	
-	</BOUCLE_affichetrois>
-
-<a class="en_savoir_plus" href="spip.php?rubrique54" title="La Campagne">voir toutes les affiches</a>
+	<BOUCLE_rub_camapgne(RUBRIQUES){titre_mot=campagne}>
+	<a class="en_savoir_plus" href="#URL_RUBRIQUE" title="[(#TITRE|supprimer_numero)]">voir toutes les affiches</a>
+	</BOUCLE_rub_camapgne>
 
 	</div>
