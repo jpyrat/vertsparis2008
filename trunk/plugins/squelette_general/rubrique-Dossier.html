@@ -21,7 +21,7 @@
 	[(#LOGO_RUBRIQUE||image_reduire{150,0})]
 	<h3><a class="propositions" href="#URL_RUBRIQUE">[(#TITRE|supprimer_numero)]</a></h3>
 	<h4><a href="#URL_RUBRIQUE">[(#DESCRIPTIF|supprimer_numero)]</a></h4>
-	[(#TEXTE|couper{240})<br /><a class="en_savoir_plus" href="#URL_RUBRIQUE">en savoir plus</a>]
+	[(#TEXTE|couper{240})<br /><a class="en_savoir_plus" href="#URL_RUBRIQUE"><:vert:savoir_plus:></a>]
 	</div>
 	</BOUCLE_sousdossier>
 	
@@ -50,7 +50,7 @@
 		 <h3><a href="#URL_ARTICLE">[(#TITRE)]</a></h3>
 		 [<div class="article_propa">(#TEXTE)</div>]
 		 <div class="propositions_reponses">
-			[(#NOTATION)]<a href="#URL_ARTICLE" class="reagir_a">R&eacute;agir&nbsp;&agrave;&nbsp;cette&nbsp;proposition</a>
+			[(#NOTATION)]<a href="#URL_ARTICLE" class="reagir_a"><:vert:reagir_propo:></a>
 		</div>
 	</div>
 	</BOUCLE_ArticleProposition>
@@ -63,7 +63,7 @@
 		 <h3><a href="#URL_ARTICLE">[(#TITRE)]</a></h3>
 		 [<div class="article_propa">(#TEXTE)</div>]
 		<div class="propositions_reponses">
-		 [(#NOTATION)]<a href="#URL_ARTICLE" class="reagir_a">R&eacute;agir&nbsp;&agrave;&nbsp;cette&nbsp;proposition</a>
+		 [(#NOTATION)]<a href="#URL_ARTICLE" class="reagir_a"><:vert:reagir_propo:></a>
 		</div>
 	</div>
 	</BOUCLE_ArticlePropositionsansvote>
