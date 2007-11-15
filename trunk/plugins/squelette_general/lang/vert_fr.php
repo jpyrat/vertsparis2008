@@ -9,6 +9,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 'participer_debat' => 'participer au d&eacute;bat',
 'voir_affiche' => 'voir toutes les affiches',
 'reagir_propo' => 'R&eacute;agir&nbsp;&agrave;&nbsp;cette&nbsp;proposition',
+'acces_debat' => 'acc&eacute;der au d&eacute;bat',
 
 );
 
