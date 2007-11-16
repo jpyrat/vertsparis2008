@@ -6,7 +6,7 @@ Si ce courrier ne s'affiche pas, vous pouvez le visualiser sur le site : [(#URL_
 Vous pouvez vous d&eacute;sabonner de cette newsletter
 	
 	Courrier
-		<BOUCLE_affichage(ARTICLES){titre_mot=Courrier_libre}{!par date}{0,1}>
+		<BOUCLE_affichage(ARTICLES){titre_mot=Courrier_libre}{!par date}>
 		[(#SURTITRE|textebrut|PyratprepareNLtexte)]
 		[(#TITRE|textebrut|PyratprepareNLtexte)]
 		[(#SOUSTITRE|textebrut|PyratprepareNLtexte)]
@@ -17,6 +17,7 @@ Vous pouvez vous d&eacute;sabonner de cette newsletter
 		[(#TEXTE|liens_absolus|textebrut|PyratprepareNLtexte)]
 		[(#PS|textebrut|PyratprepareNLtexte)]
 		[(#NOTES|textebrut|PyratprepareNLtexte)]
+		<hr />
 		</BOUCLE_affichage>
 					
 [(#CONFIG{soyezcreateurs/bandeau_contact}|propre)]
