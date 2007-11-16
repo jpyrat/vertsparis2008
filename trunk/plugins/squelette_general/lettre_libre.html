@@ -301,16 +301,8 @@ table
 					<p>Vous pouvez vous <a href="@@URL_DESINSCRIPTION@@" title="Desabonner">d�sabonner</a> de cette newsletter</p>
 				</td>
 				<td>
-					[(#CONFIG{soyezcreateurs/logoheader,navigation}|=={navigation}|?{' ',''})
-					[<div id="logosite">(#LOGO_SITE_SPIP_NORMAL||url_absolue|logo_swf_or_img{
-					#LOGO_SITE_SPIP_NORMAL||url_absolue|extraire_attribut{width},
-					#LOGO_SITE_SPIP_NORMAL||url_absolue|extraire_attribut{height},
-					<:pyrat:retouraccueil:> [(#NOM_SITE_SPIP|supprimer_tags)],
-					"/",
-					"",
-					#LOGO_SITE_SPIP_SURVOL|url_absolue}
-					)</div>]
-					]
+					[<div id="logosite">(#LOGO_SITE_SPIP_NORMAL)</div>]
+					
 				</td>
 			</tr>
 			<tr>
