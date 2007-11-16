@@ -322,13 +322,7 @@ table
 							[<div class="surtitre"><span>(#SURTITRE)</span></div>]
 							<div>
 								<h2 class="logo_article">
-								[(#LOGO_ARTICLE_NORMAL||url_absolue|logo_swf_or_img{
-								64,
-								64,
-								[(#TITRE|texte_script|supprimer_tags|entites_html|supprimer_numero) (logo)],
-								"",
-								"logo_article",
-								#LOGO_ARTICLE_SURVOL||url_absolue|image_reduire{64,64}}
+								[(#LOGO_ARTICLE_NORMAL
 								)][#DEBUT_SURLIGNE(#TITRE|Supprimer_numero)#FIN_SURLIGNE][(#CONFIG{plugin}|match{ARTICLE_PDF}|?{' '})#ARTICLE_PDF]
 								</h2>
 							</div>
@@ -360,7 +354,7 @@ table
 			<tr>
 				<td colspan="2" align="center">
 					<div id="bandeaucontact2">
-						[(#CONFIG{soyezcreateurs/bandeau_contact}|propre)]
+						
 					</div><!-- #bandeaucontact2 -->
 				</td>
 			</tr>
