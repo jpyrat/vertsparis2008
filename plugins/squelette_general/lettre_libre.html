@@ -1,321 +1,334 @@
-#CACHE{0}
-<BOUCLE_articles(ARTICLES){titre_mot=Courrier_libre}{!par date}{age<7}>
+#CACHE{30*24*3600}
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html>
 	<head>
-		<title>#TITRE &mdash; #NOM_SITE_SPIP</title>
+		<title>Lettre libre</title>
 		
 <style type="text/css"> 
-html, body {
-	margin: 0px;
+html, body	
+{
+	margin: 0;
 	padding: 0;
-	background-color: #5f5e63;
+	background-color: #53B0DE;
 }
+
 div {
 	margin: 0;
 	padding: 0;
 	border: 0;
 }
-a {
-	color:#d3d3d3;
-	font-weight: bold;
+
+a
+{
+	color:#9999ff;
 	text-decoration:none;
 }   
-a:hover {
+
+a:hover
+{
 	color:#FF9900;
 	text-decoration:underline;
 }
-#containerlettre {
+
+#containerlettre 
+{
 	color: #222;
-	background-color: #FFFFFF;
-	width: 1000px;
-	margin:auto;
+	padding-top:1px !important;
 	margin-bottom: 4em !important;
 }
-.entete {
-	margin-bottom: 0em;
-	padding: 5px;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
-	font-size: 1em;
-	text-align:left;
+
+.entete
+{
+	margin: 0 5px 0 5px;
+	margin-bottom: 2em;
+	border: 1px solid;
+	padding: 0.9em;
+	font-size: 0.82em;
 	line-height: 1.4em;
-	color:#5f5e63;
-	margin-top: 260px;
+	background : #6699CC;
+	color:#fff;
+	-moz-border-radius: 1em;
 }
-.tdentete {
+
+.tdentete
+{
 	background: #fff;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
-	text-align:left;
-	font-size: 0.8em;
 }
-.entete a {
-	color:#5f5e63;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
-	font-size: 1em;
-	text-align:center;
+
+.entete a
+{
+	color:#FFF;
 	font-weight: bold;
 }
-.entete a:hover {
+
+.entete a:hover
+{
 	color:#FF9900;
 }
-.cartouche {
+.cartouche
+{
 	position: relative;
 }
+
 .surtitre, .soustitre, .datepublication {
 	position: relative;
-	font-size: .8em;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+	font-size: .9em;
+	color: #076b8b;
 	margin-left: 0px;
 	margin-right: 0px;
 }
+
 .datepublication {
 	float: right;
 	z-index: 100;
 	font-size: .8em;
-	background: #5f5e63;
-	padding-bottom:2px;
-	padding-left:10px;
-	padding-right: 5px;
-	padding-top: 2px;
-	margin-right: 5px;
+	font-style: italic;
+	background: transparent;
+	padding: 0 5px 0 0;
 	-moz-border-radius-bottomleft: 1em;
 }
+
 .surtitre span, .soustitre span {
 	padding: 0px 1em 0px 1em;
 }
+
 .surtitre span {
-	background: #5f5e63;;
+	background: #CDECFA;
 	padding: 1px .5em;
 	-moz-border-radius-topright: 1em;
 }
+
 .soustitre span {
-	background: #5f5e63;;
+	background: #CDECFA;
 	padding: 0 .5em 1px .5em;
 	-moz-border-radius-bottomleft: 1em;
 }
+
 img {
 	border: 0px;
 	z-index: 0;
 }
+
 #lettre {
 	position: relative;
 	background: transparent;
-	margin:0;
+	margin: 0;
 	padding:0;
 	-moz-border-radius-topleft: 1em;
 	background-color: #fff;
 }
+
 #lettre img {
 	border-width: 1px;
-	padding: 0 0 0 5px;
+	padding-bottom: 0px;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	padding-top: 0px;
 }
+
 #lettre h1 {
-	color: #5f5e63;
-	background-color: #FFF;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
-	font-size: 1.6em;
+	color: #00A22A;
+	background-color: #F8FEFF;
+	font-size: 2.2em;
 	font-weight: bold;
-	border-bottom: 2px solid #5f5e63;
 	letter-spacing: 1px;
 	margin-bottom: 0em;
 	margin-top: 0em;
-	margin-right: 5px;
+	margin-right: 0;
 	margin-left: 0;
 	padding-top: 0.5em;
-	padding-left: 5px;
+	padding-left: .5em;
 	padding-bottom: 0.5em;
 	padding-right: 50px;
+	border-bottom: 4px solid #F2F8F9;
 }
-#lettre h2 {
+
+#lettre h2
+{
 	margin: 0px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 1.2em;
-	color: #5E8626;
 	padding: 0 0 0 5px;
 }
-.contenu2 {
+
+#lettre img
+{
+	padding: 0 0 0 5px;
+}
+
+.contenu2
+{
 	width: 700px;
 	background-color: #fff;
 }
-.extra2 {
+
+.extra2
+{
 	width: 200px;
-	background-color: #fff;
-	padding-top: 150px;
+	background-color: #C0C0C0;
+	padding-top: 0px;
 }
+
 .logo_article {
 	float:left;
 	margin: 10px 5px 10px 5px;
 }
+
 .descriptif, .chapo {
-	background-color: #DEDEDE;
+	background-color: #FFFFFF;
+	border: 1px solid #B4C2C2;
 	font-size: 1em;
-	color: #5f5e63;
 	font-weight: normal;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
 	text-align: justify;
 	padding: 2px 1em 3px 1em;;
 	z-index: 99;
 	clear: left;
-	margin: 2em 5px 2.2em 5px;
+	margin: 1em 5px 0 5px;
 }
-table#tlettre {
-	width: 100%;
+
+table
+{
+	width: 900px;
 }
+
 #logosite {
 	text-align: center;
-	/*background-color: #fff;*/
-	height: 220px;
-	margin-top: 50px;
+	background-color: #fff;
+	height: auto;
 }
+
 .extra2 ul li {
 	padding: 0;
-	background: #fff;
-	margin-left: 5px;
-	margin-right: 5px;
-	padding: 3px;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
-	font-size: 1em;
 }
+
 .extra2 ul li a {
+	background: transparent;
 	padding: 1px;
 	margin: 0px;
-	color: #5f5e63;
+	color: #fff;
 }
+
 .extra2 ul li a:hover {
 	color: #FF6600;
 	text-decoration: none;
 }
+
 .extra2 ul li a:active {
-	color: #ad0084;
+	color: #f93;
 	text-decoration: none;
 }
+
 .extra2 h3 {
-	color: #fff;
-	background-color: #5E8626;
-	font-size: 1em;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color: #076b8b;
+	background-color: #FFFFFF;
+	font-size: 1.2em;
 	font-weight: bold;
 	line-height: 1.5em;
 	margin-bottom: 0px;
 	margin-top: 0.5em;
 	padding-left: 10px;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	padding-right: 1px;
 	clear: left;
 }
+
 .extra2 h4 {
-	color: #FFF;
+	color: #076b8b;
 	font-size: 1em;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	line-height: 100%;
 	clear: left;
-	margin-top: 4px;
-	padding-left: 10px;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	padding-right: 1px;
+	border-left: 1px solid #cdecfa;
+	margin: 5px 4px 5px 4px;
+	padding-left: 3em;
 	display: block;
-	background-color: #4B4A50;
+	background-color: #9bdcfa;
+	-moz-border-radius: 1em;
 }
+
 #bandeaucontact2 {
 	color: #FFF;
-	/*background-color: #ad0084;*/
-	font-family:Verdana, Arial, Helvetica, sans-serif;
-	font-size: 0.8em; margin:0;
+	background-color: #016796;
+	font-size: 1em; margin:0;
 	width: auto !important;
 	text-align: center;
-	padding: 3px;
+	border-bottom: 1px solid #9B9B9B;
+	padding: 1px;
 }
+
 #letexte_lettre {
-	font-size: 1em;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
-	line-height: 115%;
-	padding: 0 18px;
+	font-size: 1.1em;
+	line-height: 120%;
+	padding: 0 30px;
 	clear: left;
 }
+
 .ps {
-	background-color: #fff;
-	border-top: 1px solid #AD0084;
+	background-color: #f8f8f8;
+	border: 1px dashed #cccccc;
 	font-size: .9em;
 	font-weight: normal;
 	text-align: justify;
-	color: #5f5e63;
-	padding: 2px .5em 2px .5em;
+	padding: 2px .5em 2px .5em;;
 	margin-top: 1em;
 	margin-bottom: .5em;
 	clear: both;
 	position: relative;
 }
+
 .notes {
-	border-top: 1px solid #5f5e63;
-	font-size: 0.8em;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
+	border-top: 1px solid #ccccff;
+	border-left: 2px solid #ccccff;
+	font-size: 1em;
 	line-height: 120%;
 	padding: .5em 1em 1em 10px;
 	margin: 1em 0 1em 0;
-	background-color: #fff;
-	color: #5f5e63;
+	background-color: #ffffcc;
+	color: #000066;
 	-moz-border-radius-bottomright: 50%;
 }
-.tdentete {
-	background: #fff url(#URL_SITE_SPIP/#CHEMIN{images/frise_newslettercorazon.gif}) no-repeat top left;
-	height:320px;
-	vertical-align: bottom;
-}
-#tdlogo {
-	background: #fff url(#URL_SITE_SPIP/#CHEMIN{images/esplogo_newslettercorazon.gif}) no-repeat top left;
-	height: 220px;
-}
-#tpied {
-	background: #5E8626 url(#URL_SITE_SPIP/#CHEMIN{images/piedpage_newslettercorazon.gif}) no-repeat top left;
-	height: 106px;
-}
-.tdentete div {
-	padding-left: 2em;
-}
+
 </style>
 
 	</head>
 	<body> 
-	<div id="containerlettre">
-		 [<div id="logosite">(#LOGO_SITE_SPIP_NORMAL)</div>]
-		<table cellspacing="0"  cellpadding="0" id="tlettre">
-			<tr id="tentete">
+	<div id="containerlettre"> 
+		<table align="center" cellspacing="0"  cellpadding="0">
+			<tr>
 				<td class="tdentete">
 					<div  class="entete">
-					<:bonjour:>, <br />Vous avez re&ccedil;u un courrier de la part du site <br /><a href="#URL_SITE_SPIP">#NOM_SITE_SPIP</a>
+					<:bonjour:>, <br />Vous avez re&ccedil;u un courrier de la part du site  <a href="#URL_SITE_SPIP">#NOM_SITE_SPIP</a>
 					</div>
-					<div id="viewonline">Si ce courrier ne s'affiche pas, vous pouvez le <a href="#URL_ARTICLE" title="#TITRE &mdash; #NOM_SITE_SPIP">visualiser sur le site</a></div>
-					<div>Vous pouvez vous <a href="@@URL_DESINSCRIPTION@@" title="Desabonner">d&eacute;sabonner</a> de cette newsletter</div>
+					<p id="viewonline">Si ce courrier ne s'affiche pas, vous pouvez le <a href="[(#URL_PAGE{liste_mail}|parametre_url{'pst_id',#PST_ID,mode,lettreseule})]" title="#NOM_SITE_SPIP">visualiser sur le site</a></p>
+					<p>Vous pouvez vous <a href="@@URL_DESINSCRIPTION@@" title="Desabonner">d�sabonner</a> de cette newsletter</p>
 				</td>
-				<td class="tdentete">
-					<table cellspacing="0"  cellpadding="0" style="height:100%;">
-						
-						<tr>
-							<td class="extra2" valign="top" style="height:100%;">
-								<h3>Derniers courriers envoy&eacute;s</h3>
-								<ul>
-									<li><a href="#URL_ARTICLE">#TITRE</a></li>
-								</ul>
-							</td>
-						</tr>
-					</table>
-
+				<td>
+					[(#CONFIG{soyezcreateurs/logoheader,navigation}|=={navigation}|?{' ',''})
+					[<div id="logosite">(#LOGO_SITE_SPIP_NORMAL||url_absolue|logo_swf_or_img{
+					#LOGO_SITE_SPIP_NORMAL||url_absolue|extraire_attribut{width},
+					#LOGO_SITE_SPIP_NORMAL||url_absolue|extraire_attribut{height},
+					<:pyrat:retouraccueil:> [(#NOM_SITE_SPIP|supprimer_tags)],
+					"/",
+					"",
+					#LOGO_SITE_SPIP_SURVOL|url_absolue}
+					)</div>]
+					]
 				</td>
-				
 			</tr>
-			<tr id="tcontenu">
+			<tr>
 				<td class="contenu2">
 					<div id="lettre">
+					<BOUCLE_articles(ARTICLES){titre_mot=Courrier_libre}{!par date}{0,1}>
 						<div class="cartouche">
-							<h1>#NOM_SITE_SPIP</h1>
+							<h1>Courrier</h1>
 							[<div class="surtitre"><span>(#SURTITRE)</span></div>]
 							<div>
 								<h2 class="logo_article">
-								[(#LOGO_ARTICLE_NORMAL#LOGO_ARTICLE||image_reduire{64,64}
+								[(#LOGO_ARTICLE_NORMAL||url_absolue|logo_swf_or_img{
+								64,
+								64,
+								[(#TITRE|texte_script|supprimer_tags|entites_html|supprimer_numero) (logo)],
+								"",
+								"logo_article",
+								#LOGO_ARTICLE_SURVOL||url_absolue|image_reduire{64,64}}
 								)][#DEBUT_SURLIGNE(#TITRE|Supprimer_numero)#FIN_SURLIGNE][(#CONFIG{plugin}|match{ARTICLE_PDF}|?{' '})#ARTICLE_PDF]
 								</h2>
 							</div>
@@ -327,21 +340,31 @@ table#tlettre {
 							[<div>(#CHAPO)</div>]
 						</div>	
 							<div id="letexte_lettre">
-								[(#TEXTE)]
+								[(#TEXTE|liens_absolus)]
 								[<div class="ps">(#PS)</div>]
 								[<div class="notes">(#NOTES)</div>]
 							</div><!-- FIn #letexte_lettre>-->
+						</BOUCLE_articles>
 					</div><!-- Fin de #lettre -->
 				</td>
-				
+				<td class="extra2" valign="top">
+					<h3>Sommaire</h3>
+					<h4>Derniers courriers envoy&eacute;s</h4>
+					<ul>
+					<BOUCLE_sommairearticles(ARTICLES){titre_mot=Courrier_libre}{!par date}{0,15}{exclus}>
+						<li><a href="#URL_ARTICLE">#TITRE</a></li>
+					</BOUCLE_sommairearticles>
+					</ul>
+				</td>
 			</tr>
-			<tr id="tpied" class="ahem">
-				<td colspan="2" align="center" valign="bottom">
-					
+			<tr>
+				<td colspan="2" align="center">
+					<div id="bandeaucontact2">
+						[(#CONFIG{soyezcreateurs/bandeau_contact}|propre)]
+					</div><!-- #bandeaucontact2 -->
 				</td>
 			</tr>
 		</table>
-	</div> <!--Fin #containerlettre -->
+	</div> <!--Fin #contenu2 -->
 	</body>
 </html>
-</BOUCLE_articles>
