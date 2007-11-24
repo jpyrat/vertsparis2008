@@ -10,17 +10,17 @@
         <INCLURE{fond=inc-entete}>
         <div id="wrapper">
             <div id="content">
-                <!-- titre du contenu de la page (un chapo ?) -->
+                <!-- titre du contenu de la page (un chapo ?)
 		<BOUCLE_pascontent(RUBRIQUES){titre_mot=Debat}>
                 [<h2 class="majuscule">(#TITRE|supprimer_numero)</h2>]
 		</BOUCLE_pascontent>
-                <!-- debut de la liste des articles disponibles -->
+               debut de la liste des articles disponibles -->
 		<BOUCLE_ALaUne(ARTICLES){titre_mot=ALaUne}>
                 <div class="article">
 		<h3 class="chapo">[(#TITRE|supprimer_numero)]</h3>
                     [<div id="marcistheboss">(#LOGO_ARTICLE||image_reduire{235,0})</div>]
-	<h3><a class="propositions" href="#URL_RUBRIQUE"><:vert:participer_debat:></a></h3>
-	<div class="edito">[(#TEXTE|couper{350})</div><a class="en_savoir_plus" href="#URL_RUBRIQUE" title="[(#TITRE|supprimer_numero)]"><:vert:savoir_plus:></a>]
+	<h3><a class="propositions" href="#URL_ARTICLE"><:vert:participer_debat:></a></h3>
+	<div class="edito">[(#TEXTE|couper{350})</div><a class="en_savoir_plus" href="#URL_ARTICLE" title="[(#TITRE|supprimer_numero)]"><:vert:savoir_plus:></a>]
 	</div>
 		</BOUCLE_ALaUne>
 
