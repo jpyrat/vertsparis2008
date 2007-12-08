@@ -274,7 +274,7 @@ h2.menu-breves {
     vertical-align:text-bottom;
 }
 
-#agenda, #newsletter ,#adherer, a.menudroit {
+#agenda, #newsletter ,#adherer, .menudroit {
 	padding-left:20px;
 }
 #rechercher input {text-align:left;vertical-align:middle;float:left;display:inline;height:17px}
