@@ -169,6 +169,76 @@ input {
    /* b. menu extras de droite 
         (pour le menu principal, � gauche, voir "annexe.css") */
         
+
+   /* b. menu extras de droite 
+        (pour le menu principal, � gauche, voir "annexe.css") */
+        
+div#video_hp {
+	width:180px; 
+	margin: 10px;
+	margin-bottom:3px;
+	text-align:center;
+	vertical-align:text-bottom;
+	display:visible;
+}
+
+div#radio {
+	width:180px; 
+	margin: 10px;
+	margin-bottom:3px;
+	padding-bottom:3px;
+	text-align:center;
+	vertical-align:text-bottom;
+	display:visible;
+}
+div#radio {
+    background-color:#000;
+}
+
+div#radio_lecteur {
+	width:180px; 
+	margin:10px;
+	margin-top:3px;
+	padding:0;
+	margin-bottom:2px;
+	padding-bottom:3px;
+	text-align:left;
+	vertical-align:text-bottom;
+	display:visible;
+}
+div#radio_lecteur {
+    background-color:#000;
+}
+
+#radio_lecteur h2 {
+    background-image: url("http://www.baupin2008.fr/squelettes/images/mini_cask.gif");
+    background-repeat: no-repeat;
+    background-position: left center;
+	margin:0;
+	padding:0;
+	color:#FFF;
+	font-family:  Arial,"Helvetica Neue", Helvetica,  Verdana, Tahoma, sans-serif;
+	font-weight: bolder;
+	margin-left:4px;
+	font-size:120%;
+	text-transform:uppercase;
+	padding: 8px 20px 8px 22px;
+}
+
+#radio_lecteur h3 {
+	color:#FFF;
+	font-family:  Arial,"Helvetica Neue", Helvetica,  Verdana, Tahoma, sans-serif;
+	font-weight: bolder;
+	font-size:85%;
+    margin:0;
+    padding:0;
+	margin-left:5px;
+	margin-bottom:2px;
+}
+
+
+
+
 div#outils_utilisateurs, div.syndic {
     width:180px; margin: 10px;padding-bottom:5px;text-align:left;vertical-align:text-bottom;
 }
@@ -218,6 +288,25 @@ a#agenda, a#newsletter ,a#adherer {
 
 .syndic li {margin-bottom:10px;clear:both;}
 
+/* , div#bloc_videos, #bloc_videos div */
+#bloc_videos { float:left; text-align:center; width:130px; padding:25px; padding-top:25px; }
+.video_daily, div.video_daily { float:left; width:120px;padding-top:10px;  margin:5px; border-style:none;}
+.video_daily a,.video_daily a:link,.video_daily a:visited {width:120px;text-decoration:none;color:#5E8626;}
+
+/* a:link, a:visited, a {text-decoration:none;color:#5E8626}
+a:hover {color:#ADCF00;cursor:pointer;} */
+
+.video_daily a img {
+float:left;
+width:120px;
+margin:0 0 0 0;
+padding:0px;
+border:1px;
+border-color:#ADCF00;
+/* border : 3px solid #5E8626; */
+
+}
+/* .video_daily #texte { margin:3px 0 0 0; } */
     /* liens Footer */
     
 #footer a {display:inline;}
