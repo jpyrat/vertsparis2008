@@ -261,20 +261,36 @@ h2.menu-breves {
     text-transform: uppercase;
 }
 
-#agenda, #newsletter ,#adherer, #rechercher{
+#agenda, #newsletter ,#adherer, #rechercher {
     height:20px;
     text-align:left;
     vertical-align:text-bottom;
 }
-#agenda, #newsletter ,#adherer {
+
+.menudroit {
+	display:block;
+    height:20px;
+    text-align:left;
+    vertical-align:text-bottom;
+}
+
+#agenda, #newsletter ,#adherer, a.menudroit {
 	padding-left:20px;
 }
 #rechercher input {text-align:left;vertical-align:middle;float:left;display:inline;height:17px}
 #rechercher label {display:none;}
     /* liens Extras (colonne de droite) */
     
-a#agenda, a#newsletter ,a#adherer {
+a#agenda, a#newsletter, a#adherer {
     padding-top:5px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url("../images/fleche_v_fond_vert.gif");}
+
+
+a.menudroit {
+	display:block;
+     padding-top:5px;
     background-repeat: no-repeat;
     background-position: left center;
     background-image: url("../images/fleche_v_fond_vert.gif");}
