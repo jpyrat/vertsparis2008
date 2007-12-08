@@ -373,8 +373,8 @@ a:hover {color:#ADCF00;cursor:pointer;}
 
         /* b. les outils utilisateurs */
 
-#agenda, #newsletter ,#adherer {color:#5E8626;font-weight:bold;}
-a#agenda:hover, a#newsletter:hover, a#adherer:hover {color: #FFF;}
+#agenda, #newsletter ,#adherer, .menudroit {color:#5E8626;font-weight:bold;}
+a#agenda:hover, a#newsletter:hover, a#adherer:hover, a.menudroit:hover {color: #FFF;}
 
 /* le footer */
 #footer a, #footer a:link, #footer a:visited {color:#AAA; text-transform:uppercase;font-size:85%;font-weight:100;}
@@ -386,5 +386,5 @@ a#agenda:hover, a#newsletter:hover, a#adherer:hover {color: #FFF;}
  ------------------------------------------------------- */
 
 #rechercher {background : #89BA13;}
-#agenda, #newsletter ,#adherer {background : #ADCF00; border:3px solid #89BA13;}
+#agenda, #newsletter ,#adherer, .menudroit {background : #ADCF00; border:3px solid #89BA13;}
 input {border : 1px solid #89BA13;}
