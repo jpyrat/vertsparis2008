@@ -164,7 +164,7 @@ function config_site() {
 
 		create_mot("_ConfigSite", "PictoCampagneSommaire", "La Campagne - Saison 1", "");
 		create_mot("_ConfigSite", "PictoMilieuSommaire", "Mettre en logo l\'image du milieu dans la page sommaire (celle qui sépare l\'édito et la suite)", "");
-		create_mot("_ConfigSite", "deuxvideo", "Mettre en logo de ce mot l\'image de titre des videos pour afficher 2 videos dans la colonne de gauche", "");
+		create_mot("_ConfigSite", "deuxvideos", "Mettre en logo de ce mot l\'image de titre des videos pour afficher 2 videos dans la colonne de gauche", "");
 
 
 	create_groupe("_SpecialisationArticle", "Un mot clef pris dans ce groupe permettra de modifier\n\nle comportement d\'un article particulier", "", 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'oui', 'non', 'non');
