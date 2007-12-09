@@ -190,9 +190,9 @@ function config_site() {
 
 		create_mot("_SpecialisationRubrique", "Agenda", "Pour dire qu\'une rubrique est dans l\'Agenda", "");
 		create_mot("_SpecialisationRubrique", "PasDansMenu", "Pour interdire que la rubrique soi(en)t dans le menu de gauche", "");
-
-		create_mot("_SpecialisationRubrique", "PasDansPlan", "Permet de masquer une rubrique, et tout son contenu (y compris les sous-rubriques) du plan du site", "");
 		create_mot("_SpecialisationRubrique", "menudroit", "À affecter aux rubriques destinées à être affichés dans le menu de droite","");
+		create_mot("_SpecialisationRubrique", "PasDansPlan", "Permet de masquer une rubrique, et tout son contenu (y compris les sous-rubriques) du plan du site", "");
+
 
 	create_groupe("_squelette", "Pour changer le comportement des rubriques", "", 'oui', 'non', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non');
 
