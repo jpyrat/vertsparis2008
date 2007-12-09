@@ -180,10 +180,10 @@ function config_site() {
 		create_mot("_SpecialisationArticle", "presse", "", "");
 		create_mot("_SpecialisationArticle", "Proposition", "Pour tous les articles qui sont une proposition", "");
 
+		create_mot("_SpecialisationArticle", "menudroit", "À affecter aux articles destinés à être affichés dans le menu de droite","");
 		create_mot("_SpecialisationArticle", "video", "À affecter aux articles destinés à être pris au hasard pour afficher un lien vers une vidéo.\n\nLa vidéo doit avoir une vignette personnalisée.", "");
 		create_mot("_SpecialisationArticle", "Courrier_libre", "À affecter aux articles destinés à être pris pour la newsletter","");
 		create_mot("_SpecialisationArticle", "MilieuSommaire", "À affecter aux articles destinés à être pris pour la page sommaire","");
-		create_mot("_SpecialisationArticle", "menudroit", "À affecter aux articles destinés à être affichés dans le menu de droite","");
 
 
 	create_groupe("_SpecialisationRubrique", "Un mot clef pris dans ce groupe permettra de modifier le comportement dune rubrique (et de ses articles)", "", 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non');
