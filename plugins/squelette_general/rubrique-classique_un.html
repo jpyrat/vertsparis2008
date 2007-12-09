@@ -1,0 +1,64 @@
+[(#REM) rubrique]
+#CACHE{7200}
+<BOUCLE_rubrique_principal(RUBRIQUES) {id_rubrique}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr" dir="ltr">
+<head>
+<title>[(#TITRE|supprimer_numero|attribut_html)] [#NOM_SITE_SPIP]</title>
+<INCLURE{fond=inc-head}>
+</head>
+<body>
+    <div id="container">
+        <!-- haut de page : la banniere (lien constant vers l'accueil) -->
+        <INCLURE{fond=inc-entete}>
+        <div id="wrapper">
+            <div id="content">
+	<div id="fil_ariane"><a href="#URL_SITE_SPIP/"><:accueil_site:></a><BOUCLE_ariane(HIERARCHIE){id_rubrique}>&nbsp;&raquo;&nbsp;<a href="#URL_RUBRIQUE">[(#TITRE|supprimer_numero|couper{80})]</a></BOUCLE_ariane>[&nbsp;&raquo;&nbsp;(#TITRE|supprimer_numero|couper{80})]</div>
+<BOUCLE_dossiers(RUBRIQUES){id_rubrique}{titre_mot=classique}>
+[<h2>(#TITRE|supprimer_numero)</h2>]
+	<BOUCLE_sousdossier(RUBRIQUES) {id_parent} {par num titre, titre}>
+	<div class="article">
+	[(#LOGO_RUBRIQUE||image_reduire{150,0})]
+	<h3><a class="propositions" href="#URL_RUBRIQUE">[(#TITRE|supprimer_numero)]</a></h3>
+	<h4><a href="#URL_RUBRIQUE">[(#DESCRIPTIF|supprimer_numero)]</a></h4>
+	[(#TEXTE|couper{240})<br /><a class="en_savoir_plus" href="#URL_RUBRIQUE"><:vert:savoir_plus:></a>]
+	</div>
+	</BOUCLE_sousdossier>
+
+	
+</BOUCLE_dossiers>
+
+<BOUCLE_parent(HIERARCHIE){inverse}>
+[<h2>(#TITRE|supprimer_numero)</h2>]
+</BOUCLE_parent>
+<div class="article">
+	[(#LOGO_RUBRIQUE||image_reduire{150,0})]
+	<h3>[(#TITRE|supprimer_numero)]</h3>
+	<h4>[(#DESCRIPTIF)]</h4>
+	#TEXTE
+</div>
+
+	<BOUCLE_article_dossiers(ARTICLES){id_rubrique}{par num titre, titre}>
+	<div class="article">
+	[(#LOGO_ARTICLE||image_reduire{150,0})]
+	<h3>[(#TITRE|supprimer_numero)]</h3>
+	<h4>[(#DESCRIPTIF)]</h4>
+	[(#TEXTE|couper{450})<br /><a class="en_savoir_plus" href="#URL_ARTICLE"><:vert:savoir_plus:></a>]
+	</div>
+	</BOUCLE_article_dossiers>
+
+
+<BOUCLE_agenda(RUBRIQUES){id_rubrique}{titre_mot=Agenda}>
+<INCLURE{fond=inc-agendaliste}{id_rubrique}>
+</BOUCLE_agenda>
+
+<//B_dossiers>
+            </div>
+        </div>
+        <INCLURE{fond=inc-gauche}>
+        <INCLURE{fond=inc-droite}>
+        <INCLURE{fond=inc-pied}>
+    </div>
+</body>
+</html>
+</BOUCLE_rubrique_principal>
