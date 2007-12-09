@@ -164,6 +164,7 @@ function config_site() {
 
 		create_mot("_ConfigSite", "PictoCampagneSommaire", "La Campagne - Saison 1", "");
 		create_mot("_ConfigSite", "PictoMilieuSommaire", "Mettre en logo l\'image du milieu dans la page sommaire (celle qui sépare l\'édito et la suite)", "");
+		create_mot("_ConfigSite", "deuxvideo", "Mettre en logo de ce mot l\'image de titre des videos pour afficher 2 videos dans la colonne de gauche", "");
 
 
 	create_groupe("_SpecialisationArticle", "Un mot clef pris dans ce groupe permettra de modifier\n\nle comportement d\'un article particulier", "", 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'oui', 'non', 'non');
@@ -182,6 +183,8 @@ function config_site() {
 		create_mot("_SpecialisationArticle", "video", "À affecter aux articles destinés à être pris au hasard pour afficher un lien vers une vidéo.\n\nLa vidéo doit avoir une vignette personnalisée.", "");
 		create_mot("_SpecialisationArticle", "Courrier_libre", "À affecter aux articles destinés à être pris pour la newsletter","");
 		create_mot("_SpecialisationArticle", "MilieuSommaire", "À affecter aux articles destinés à être pris pour la page sommaire","");
+		create_mot("_SpecialisationArticle", "menudroit", "À affecter aux articles destinés à être affichés dans le menu de droite","");
+
 
 	create_groupe("_SpecialisationRubrique", "Un mot clef pris dans ce groupe permettra de modifier le comportement dune rubrique (et de ses articles)", "", 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non');
 
@@ -189,6 +192,7 @@ function config_site() {
 		create_mot("_SpecialisationRubrique", "PasDansMenu", "Pour interdire que la rubrique soi(en)t dans le menu de gauche", "");
 
 		create_mot("_SpecialisationRubrique", "PasDansPlan", "Permet de masquer une rubrique, et tout son contenu (y compris les sous-rubriques) du plan du site", "");
+		create_mot("_SpecialisationRubrique", "menudroit", "À affecter aux rubriques destinées à être affichés dans le menu de droite","");
 
 	create_groupe("_squelette", "Pour changer le comportement des rubriques", "", 'oui', 'non', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non');
 
@@ -198,6 +202,10 @@ function config_site() {
 		create_mot("_squelette", "candidat", "", "");
 		create_mot("_squelette", "Debat", "", "");
 		create_mot("_squelette", "Dossier", "Pour définir la rubrique des dossiers", "");
+		create_mot("_squelette", "classique", "Affichage quasi-universel Type I", "");
+		create_mot("_squelette", "classique_un", "Affichage quasi-universel Type II", "");
+		create_mot("_squelette", "classique_deux", "Affichage quasi-universel Type III", "");
+		create_mot("_squelette", "classique_alter", "Affichage quasi-universel alternatif Type A", "");
 
 
 ## <--------------------------------------------
