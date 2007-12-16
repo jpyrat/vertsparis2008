@@ -16,7 +16,7 @@
             <!-- Positionnement pour le module "voir la video" -->
 		<BOUCLE_Video(ARTICLES){titre_mot=video}{par hasard}{0,1}>
 		<BOUCLE_documents_joints(DOCUMENTS) {id_article}{par hasard}{0,1} >
-		[(#LOGO_DOCUMENT|#URL_ARTICLE)<br />]
+		[(#LOGO_ARTICLE|#URL_ARTICLE)<br />]
 		</BOUCLE_documents_joints>
 		</BOUCLE_Video>
 
