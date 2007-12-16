@@ -11,13 +11,47 @@
         <div id="wrapper">
             <div id="content">
 
-		<BOUCLE_ALaUne(ARTICLES){titre_mot=ALaUne}>
+		<BOUCLE_ALaUne(ARTICLES){titre_mot=ALaUne}{par date}{inverse}>
                 <div class="article">
 		<h3 class="chapo">[(#TITRE|supprimer_numero)]</h3>
                     [<div id="marcistheboss">(#LOGO_ARTICLE||image_reduire{235,0})</div>]
 	<div class="edito">[(#TEXTE|couper{350})</div><a class="en_savoir_plus" href="#URL_ARTICLE" title="[(#TITRE|supprimer_numero)]"><:vert:savoir_plus:></a>]
 	</div>
 		</BOUCLE_ALaUne>
+
+		<BOUCLE_ALaDeux(ARTICLES){titre_mot=ALaDeux}{par date}{inverse}>
+                <div class="article">
+		<h3 class="chapo">[(#TITRE|supprimer_numero)]</h3>
+                    [<div id="marcistheboss">(#LOGO_ARTICLE||image_reduire{235,0})</div>]
+	<div class="edito">[(#TEXTE|couper{350})</div><a class="en_savoir_plus" href="#URL_ARTICLE" title="[(#TITRE|supprimer_numero)]"><:vert:savoir_plus:></a>]
+	</div>
+		</BOUCLE_ALaDeux>
+
+		<BOUCLE_ALaTrois(ARTICLES){titre_mot=ALaTrois}{par date}{inverse}>
+                <div class="article">
+		<h3 class="chapo">[(#TITRE|supprimer_numero)]</h3>
+                    [<div id="marcistheboss">(#LOGO_ARTICLE||image_reduire{235,0})</div>]
+	<div class="edito">[(#TEXTE|couper{350})</div><a class="en_savoir_plus" href="#URL_ARTICLE" title="[(#TITRE|supprimer_numero)]"><:vert:savoir_plus:></a>]
+	</div>
+		</BOUCLE_ALaTrois>
+
+		<BOUCLE_ALaQuatre(ARTICLES){titre_mot=ALaQuatre}{par date}{inverse}>
+                <div class="article">
+		<h3 class="chapo">[(#TITRE|supprimer_numero)]</h3>
+                    [<div id="marcistheboss">(#LOGO_ARTICLE||image_reduire{235,0})</div>]
+	<div class="edito">[(#TEXTE|couper{350})</div><a class="en_savoir_plus" href="#URL_ARTICLE" title="[(#TITRE|supprimer_numero)]"><:vert:savoir_plus:></a>]
+	</div>
+		</BOUCLE_ALaQuatre>
+
+
+		<BOUCLE_ALaUne_chrono(ARTICLES){titre_mot=ALaUne_chrono}{par date}{inverse}>
+                <div class="article">
+		<h3 class="chapo">[(#TITRE|supprimer_numero)]</h3>
+                    [<div id="marcistheboss">(#LOGO_ARTICLE||image_reduire{235,0})</div>]
+	<div class="edito">[(#TEXTE|couper{350})</div><a class="en_savoir_plus" href="#URL_ARTICLE" title="[(#TITRE|supprimer_numero)]"><:vert:savoir_plus:></a>]
+	</div>
+		</BOUCLE_ALaUne_chrono>
+
 
 	<BOUCLE_PictoCampagneSommaire(MOTS){titre=PictoCampagneSommaire}>
 	[(#LOGO_MOT||inserer_attribut{class,imgintertitre})]
@@ -32,6 +66,13 @@
 	</BOUCLE_PictoMilieuSommaire>
 
 	<INCLURE{fond=inc-centre-sommaire}>
+
+	<INCLURE{fond=inc-coeur-sommaire}>
+
+
+
+
+
 
             </div>
         </div>
