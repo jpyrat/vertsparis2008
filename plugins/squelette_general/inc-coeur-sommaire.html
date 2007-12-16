@@ -1,0 +1,14 @@
+#CACHE{3600}
+<BOUCLE_ALaTest(ARTICLES){titre_mot=ALaTest}>
+	<div class="bloc_ALaDeux">
+	
+                <div class="article">
+	
+	[(#LOGO_ARTICLE||image_reduire{100,0})]
+	[<h3><a href="#_sous_rubriques:URL_ARTICLE" class="titre-article">(#_sous_rubriques:TITRE|supprimer_numero)</a></h3>]
+	[<h5>(#DESCRIPTIF|couper{23})</h5>]
+	[<p class="debut_articles">(#TEXTE|couper{80})</p><a class="en_savoir_plus" href="#_sous_rubriques:URL_ARTICLE" title="[(#TITRE|supprimer_numero)]"><:vert:savoir_plus:></a>]
+	</div>
+	
+	</div>
+	</BOUCLE_ALaTest>
