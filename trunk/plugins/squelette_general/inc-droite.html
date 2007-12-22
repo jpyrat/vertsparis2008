@@ -10,7 +10,7 @@
 	    </div>
 	
             <br /><!-- Positionnement pour le module "voir la video" -->
-		<BOUCLE_Video(ARTICLES){titre_mot=droitevideo}>
+		<BOUCLE_Video(ARTICLES){titre_mot=video}>
 		[(#LOGO_ARTICLE|#URL_ARTICLE|image_reduire{160,0})][<a href="#URL_ARTICLE" title="#TITRE"><h5>(#TITRE|supprimer_numero|couper{35})</h5></a>]<br />
 		</BOUCLE_Video>
          
