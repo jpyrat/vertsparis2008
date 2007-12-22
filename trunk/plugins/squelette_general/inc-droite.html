@@ -7,16 +7,16 @@
             <div id="radio_lecteur"> 
 	    	<h2><a href="http://frequenceverte.lesverts2008.fr/~webradio/popup2.html" onclick="window.open(this.href, 'Frequence_Verte', 'height=250, width=200, toolbar=no, location=yes');return false;" title="Fr&eacute;quence Verte (popup)">&Eacute;coutez la radio</a></h2>
 
-
-
-		
-
 	    </div>
 	
             <br /><!-- Positionnement pour le module "voir la video" -->
-		<BOUCLE_Video(ARTICLES){titre_mot=video}{par hasard}{0,1}>
-		[(#LOGO_ARTICLE|#URL_ARTICLE)][<a href="#URL_ARTICLE" title="#TITRE"><h5>(#TITRE|supprimer_numero|couper{35})</h5></a>]
+		<BOUCLE_Video(ARTICLES){titre_mot=droitevideo}>
+		[(#LOGO_ARTICLE|#URL_ARTICLE|image_reduire{160,0})][<a href="#URL_ARTICLE" title="#TITRE"><h5>(#TITRE|supprimer_numero|couper{35})</h5></a>]<br />
 		</BOUCLE_Video>
+         
+		<BOUCLE_focus_haut_droite(ARTICLES){titre_mot=focushautdroite}>
+		[(#LOGO_ARTICLE|#URL_ARTICLE|image_reduire{160,0})][<a href="#URL_ARTICLE" title="#TITRE"><h5>(#TITRE|supprimer_numero|couper{35})</h5></a>>]<br /
+		</BOUCLE_focus_haut_droite>
 
             <!-- le menu des outils utilisateurs -->
             <div id="outils_utilisateurs">
@@ -38,5 +38,11 @@
                 #FORMULAIRE_RECHERCHE
             </div>
             <!-- le menu des outils utilisateurs -->
+
+           <br />
+		<BOUCLE_focus_bas_droite(ARTICLES){titre_mot=focusbasdroite}>
+		[(#LOGO_ARTICLE|#URL_ARTICLE|image_reduire{160,0})][<a href="#URL_ARTICLE" title="#TITRE"><h5>(#TITRE|supprimer_numero|couper{35})</h5></a>]
+		</BOUCLE_focus_bas_droite>
+
         </div>
 <!-- fin  de extra -->
