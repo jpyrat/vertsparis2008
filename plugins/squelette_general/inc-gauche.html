@@ -6,7 +6,12 @@
 <BOUCLE_rubriques(RUBRIQUES) {racine} {par num titre, titre}{doublons}>
 	<a href="#URL_RUBRIQUE" id="rub_#ID_RUBRIQUE"[ title="(#TITRE|attribut_html)"]></a>
 </BOUCLE_rubriques>
-            
+
+
+<BOUCLE_menugauche(ARTICLES){titre_mot=menugauche}>
+<a href="#URL_ARTICLES" id="art_#ID_ARTICLES"[ title="(#TITRE|attribut_html)"]></a>
+</BOUCLE_menugauche>
+          
             <!-- Positionnement pour le module "navigation via la carte"
             <div id="carte_paris">
                 <img src='#CHEMIN{images/carte_paris.gif}' alt="votre arrondissement" />
@@ -34,6 +39,19 @@
 <h5>Jardins partag&eacute;s. On arr&ecirc;te ou on continue&nbsp;?</h5>
 </div></div>]
 	</BOUCLE_PictoCampagneSommaire>
+
+
+            <!-- Positionnement pour le module "voir la video" -->
+<B_Video_gauche>
+<div id="bloc_videos_gauche">
+<h4>La campagne en vid&eacute;o</h4></div>
+<BOUCLE_Video_gauche(ARTICLES){titre_mot=video}>
+[(#LOGO_ARTICLE|#URL_ARTICLE|image_reduire{150,0})][<a href="#URL_ARTICLE" title="#TITRE"><h5>(#TITRE|supprimer_numero|couper{35})</h5><br /></a>]
+</BOUCLE_Video_gauche>
+           
+
+</B_Video_gauche>
+
 
 
 </div>
