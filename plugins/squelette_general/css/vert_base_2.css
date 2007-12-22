@@ -304,6 +304,10 @@ a.menudroit {
 
 /* , div#bloc_videos, #bloc_videos div */
 #bloc_videos { float:left; text-align:center; width:130px; padding:25px; padding-top:25px; }
+#bloc_videos_gauche { float:left; text-align:center; width:150px; padding:25px; padding-top:35px; }
+
+#bloc_videos_gauche h5 {clear:both; float:none}
+
 .video_daily, div.video_daily { float:left; width:120px;padding-top:10px;  margin:5px; border-style:none;}
 .video_daily a,.video_daily a:link,.video_daily a:visited {width:120px;text-decoration:none;color:#5E8626;}
 
