@@ -174,7 +174,7 @@ function config_site() {
 		create_mot("_SpecialisationArticle", "ALaDeux", "Article qui doit rester  la une du site", "");
 		create_mot("_SpecialisationArticle", "ALaTrois", "Article qui doit rester  la une du site", "");
 		create_mot("_SpecialisationArticle", "ALaQuatre", "Article qui doit rester  la une du site", "");
-		create_mot("_SpecialisationArticle", "ALaUne_Chrono", "Article qui doit rester  la une du site", "");
+		create_mot("_SpecialisationArticle", "ALaUne_Chrono", "Article qui doit rester la une du site tri par date du plus recent", "");
 
 		create_mot("_SpecialisationArticle", "Campagne", "", "");
 		create_mot("_SpecialisationArticle", "Engager", "", "");
