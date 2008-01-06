@@ -14,7 +14,7 @@
         <div id="wrapper">
             <div id="content">
 	<div id="fil_ariane"><a href="#URL_SITE_SPIP/"><:accueil_site:></a><BOUCLE_ariane(HIERARCHIE){id_rubrique}>&nbsp;&raquo;&nbsp;<a href="#URL_RUBRIQUE">[(#TITRE|supprimer_numero|couper{80})]</a></BOUCLE_ariane>[&nbsp;&raquo;&nbsp;(#TITRE|supprimer_numero|couper{80})]</div>
-<BOUCLE_dossiers(RUBRIQUES){id_rubrique}{titre_mot=classique}>
+<BOUCLE_dossiers(RUBRIQUES){id_rubrique}{titre_mot=classique_alter}>
 [<h2>(#TITRE|supprimer_numero)</h2>]
 	<BOUCLE_article_dossiers(ARTICLES){id_rubrique}{par num titre, titre}>
 	<div class="article">
