@@ -1,2 +1,8 @@
 /* b. navigation - comportement du menu - rubriques */
 
+div#carte_paris {
+	width:190px;
+	height:190px;float:left; text-align:center;
+	border:0;
+	background:url(/IMG/carte/paris.gif) no-repeat;
+}
