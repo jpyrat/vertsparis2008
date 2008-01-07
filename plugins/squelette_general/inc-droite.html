@@ -1,6 +1,7 @@
 [(#REM) menu droit]
 <div id="extra">
 <a href="http://www.baupin2008.fr/" onclick="window.open(this.href, 'baupin2008');return false;" title="visiter le site baupin2008.fr (popup)"><img src="http://www.baupin2008.fr/IMG/logo_site_baupin.jpg" width="180" height="54" alt="visiter le site baupin2008.fr (popup)" /></a>
+
 <div id="radio">
 		<a href="http://frequenceverte.lesverts2008.fr/~webradio/popup2.html" onclick="window.open(this.href, 'Frequence_Verte', 'height=250, width=200, toolbar=no, location=yes');return false;" title="Fr&eacute;quence Verte (popup)"><img src="http://www.baupin2008.fr/IMG/frequence_verte.jpg" width="180" height="53" alt="Fr&eacute;quence Verte" /></a>
 	    </div>	    	
@@ -9,14 +10,14 @@
 	    	<h2><a href="http://frequenceverte.lesverts2008.fr/~webradio/popup2.html" onclick="window.open(this.href, 'Frequence_Verte', 'height=250, width=200, toolbar=no, location=yes');return false;" title="Fr&eacute;quence Verte (popup)">&Eacute;coutez la radio</a></h2>
 
 	    </div>
-	
-            <br /><!-- Positionnement pour le module "voir la video" -->
+<a href="http://www.baupin2008.fr/-Que-faut-il-faire-du-boulevard-.html" onclick="window.open(this.href, 'baupin2008_debat');return false;" title="Que faut-il faire du boulevard périphérique ? (popup)"><img src="/IMG/logo_participez.png" width="160" height="113" alt="Que faut-il faire du boulevard périphérique ? (popup)" /><h5>Que faire du périphérique ?</h5></a>
+           <!-- Positionnement pour le module "voir la video" -->
 		<BOUCLE_Video(ARTICLES){titre_mot=video}>
 		[(#LOGO_ARTICLE|#URL_ARTICLE|image_reduire{160,0})][<a href="#URL_ARTICLE" title="#TITRE"><h5>(#TITRE|supprimer_numero|couper{35})</h5></a>]<br />
 		</BOUCLE_Video>
          
 		<BOUCLE_focus_haut_droite(ARTICLES){titre_mot=focushautdroite}>
-		[(#LOGO_ARTICLE|#URL_ARTICLE|image_reduire{160,0})][<a href="#URL_ARTICLE" title="#TITRE"><h5>(#TITRE|supprimer_numero|couper{35})</h5></a>>]<br /
+		[(#LOGO_ARTICLE|#URL_ARTICLE|image_reduire{160,0})][<a href="#URL_ARTICLE" title="#TITRE"><h5>(#TITRE|supprimer_numero|couper{35})</h5></a>]<br /
 		</BOUCLE_focus_haut_droite>
 
             <!-- le menu des outils utilisateurs -->
@@ -40,7 +41,6 @@
             </div>
             <!-- le menu des outils utilisateurs -->
 
-           <br />
 		<BOUCLE_focus_bas_droite(ARTICLES){titre_mot=focusbasdroite}>
 		[(#LOGO_ARTICLE|#URL_ARTICLE|image_reduire{160,0})][<a href="#URL_ARTICLE" title="#TITRE"><h5>(#TITRE|supprimer_numero|couper{35})</h5></a>]
 		</BOUCLE_focus_bas_droite>
