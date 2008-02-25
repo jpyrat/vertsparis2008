@@ -248,7 +248,7 @@ table
     padding: 1px;background-color: #fff;
 }
 
-#letexte_lettre {
+.letexte_lettre {
     font-size: 1.1em;
     line-height: 120%;
     padding: 0 30px;
@@ -298,8 +298,7 @@ table
             <tr>
                 <td class="contenu2">
                     <div id="lettre">
-                    <BOUCLE_tri_article(MOTS){type=news}>
-                    <BOUCLE_articles(ARTICLES){id_mot}>
+                    <BOUCLE_articles(ARTICLES){titre_mot=Courrier_libre}{!par date}>
                         <div class="cartouche">
                             
                             [<div class="surtitre"><span>(#SURTITRE)</span></div>]
@@ -317,7 +316,7 @@ table
                             [<div>(#DESCRIPTIF)</div>]        
                             [<div>(#CHAPO)</div>]
                         </div>    
-                            <div id="letexte_lettre">
+                            <div class="letexte_lettre">
                             [(#LOGO_ARTICLE|right||image_reduire{130,75})]
                                 [(#TEXTE|liens_absolus|couper{300})]
                                 <br />
@@ -326,7 +325,6 @@ table
                                 [<div class="notes">(#NOTES)</div>]
                             </div><!-- FIn #letexte_lettre>-->
                         </BOUCLE_articles>
-                    </BOUCLE_tri_article>
                         
                     </div><!-- Fin de #lettre -->
                 </td>
